@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Concert(models.Model):
@@ -11,3 +12,6 @@ class Concert(models.Model):
 
     def __unicode__(self):
         return self.venue + self.date
+
+    def is_upcoming(self):
+        return self.date > timezone.now()
