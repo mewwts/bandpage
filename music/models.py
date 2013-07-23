@@ -32,8 +32,8 @@ class Album(models.Model):
     artwork_img = models.ImageField(upload_to='temp/folder', help_text='dimensions', blank=True) ## Fix later: Urls
 
     is_vinyl = models.BooleanField()
+    vinyl_release_date = models.DateField('date released', blank=True)
     vinyl_artwork_img = models.ImageField(upload_to='temp/folder', help_text='dimensions', blank=True) ## Fix later: Urls, only if is_vinyl
-    vinyl_release_date = models.DateField('date released')
     
     sales_link = generic.GenericRelation(SalesLink)
 
