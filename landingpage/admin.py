@@ -4,7 +4,7 @@ from landingpage.models import Landingpage
 
 class LandingAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,               {'fields': ['cover_image']}),
+        (None, {'fields': ['cover_image']}),
         ('Content', {'fields': ['title', 'link_url', 'text']}),
         ('Theme', {'fields': ['theme']}),
     ]
