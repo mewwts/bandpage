@@ -2,7 +2,6 @@ from django.db import models
 
 
 class Landingpage(models.Model):
-
     THEME_CHOICES = (
         ('dark', 'Dark Theme'),
         ('lite', 'Lite Theme')
@@ -14,3 +13,6 @@ class Landingpage(models.Model):
     cover_image = models.ImageField(upload_to='temp/folder',
                                     help_text='dimensions')
     theme = models.CharField(choices=THEME_CHOICES, max_length=4)
+
+    def __unicode__(self):
+        return self.title + self.theme
