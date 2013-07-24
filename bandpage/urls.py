@@ -16,5 +16,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('landingpage.urls')),
     url(r'^concerts/', include('concerts.urls')),
-    url(r'^music/', include('music.urls'))
+    url(r'^music/', include('music.urls')),
+    url(r'^photos/', include('photos.urls'))
 )
