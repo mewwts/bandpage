@@ -23,8 +23,8 @@ class SalesLink(models.Model):
     content_object = generic.GenericForeignKey('content_type', 'object_id')
 
     def __unicode__(self):
-        return u'%s %s' % (self.type, self.description) 
-        
+        return u'%s %s' % (self.type, self.description)
+
 
 class Album(models.Model):
     title = models.CharField(max_length=200)
@@ -34,12 +34,12 @@ class Album(models.Model):
     is_vinyl = models.BooleanField()
     vinyl_release_date = models.DateField('date released', blank=True)
     vinyl_artwork_img = models.ImageField(upload_to='temp/folder', help_text='dimensions', blank=True) ## Fix later: Urls, only if is_vinyl
-    
+
     sales_link = generic.GenericRelation(SalesLink)
 
     def __unicode__(self):
-        return u'%s' % (self.title) 
-    
+        return u'%s' % (self.title)
+
 
 class Song(models.Model):
     title = models.CharField(max_length=200)
@@ -54,10 +54,10 @@ class Song(models.Model):
     sales_link = generic.GenericRelation(SalesLink)
 
     def __unicode__(self):
-        return u'%s' % (self.title) 
-        
+        return u'%s' % (self.title)
 
-##  TODO 
-##  Media root in settings file 
+
+##  TODO
+##  Media root in settings file
 ##  upload_to-folders
 ##  Filetype checker
