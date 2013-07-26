@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Photos{% endblock title %}
+
+{% block content %}
+
+    {% if video_list %}
+        <ul>
+        {% for video in video_list %}
+            <li>{{ video.title }}, text: {{ video.text }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no videos to display.</p>
+    {% endif %}
+    
+{% endblock content %}
