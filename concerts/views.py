@@ -1,11 +1,7 @@
-from django.template import Context, loader
+from django.shortcuts import render
 from concerts.models import Concert
-from django.http import HttpResponse
 
 def index(request):
     concert_list = Concert.objects.all().order_by('date')
-    template = loader.get_template('concerts/index.html')
-    context = Context ({
-        'concert_list': concert_list,
-    })
-    return HttpResponse(template.render(context))
+    context = {'concert_list': concert_list}
+    return render(request, 'concerts/index.html', context)
