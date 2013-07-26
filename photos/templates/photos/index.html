@@ -1,9 +1,15 @@
-{% if photo_list %}
-    <ul>
-    {% for photo in photo_list %}
-        <li>{{ photo.title }}, Foto: {{ photo.photographer }}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>There are no photos to display.</p>
-{% endif %}
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if photo_list %}
+        <ul>
+        {% for photo in photo_list %}
+            <li>{{ photo.title }}, Foto: {{ photo.photographer }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no photos to display.</p>
+    {% endif %}
+    
+{% endblock content %}

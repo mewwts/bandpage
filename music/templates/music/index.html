@@ -1,34 +1,40 @@
-<h2> Album </h2>
-{% if album_list %}
-    <ul>
-    {% for album in album_list %}
-        <li>{{ album.title }}, {{ album.release_date }},
-            <a href="{{ album.sales_link }}">Kjoep</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>Ingen album her :(</p>
-{% endif %}
+{% extends 'base.html' %}
 
-<h2> Singler </h2>
-{% if single_list %}
-    <ul>
-    {% for single in single_list %}
-        <li>{{ single.title }}, {{ single.release_date }},
-            <a href="{{ single.sales_link }}">Kjoep</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>Ingen singler her :(</p>
-{% endif %}
+{% block content %}
 
-<h2> Vinyler </h2>
-{% if vinyl_list %}
-    <ul>
-    {% for vinyl in vinyl_list %}
-        <li>{{ vinyl.title }}, {{ vinyl.vinyl_release_date }},<a href="{{ album.sales_link }}">Kjoep</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>Ingen vinyler her :(</p>
-{% endif %}
+    <h2> Album </h2>
+    {% if album_list %}
+        <ul>
+        {% for album in album_list %}
+            <li>{{ album.title }}, {{ album.release_date }},
+                <a href="{{ album.sales_link }}">Kjoep</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Ingen album her :(</p>
+    {% endif %}
+
+    <h2> Singler </h2>
+    {% if single_list %}
+        <ul>
+        {% for single in single_list %}
+            <li>{{ single.title }}, {{ single.release_date }},
+                <a href="{{ single.sales_link }}">Kjoep</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Ingen singler her :(</p>
+    {% endif %}
+
+    <h2> Vinyler </h2>
+    {% if vinyl_list %}
+        <ul>
+        {% for vinyl in vinyl_list %}
+            <li>{{ vinyl.title }}, {{ vinyl.vinyl_release_date }},<a href="{{ album.sales_link }}">Kjoep</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Ingen vinyler her :(</p>
+    {% endif %}
+
+{% endblock content %}
