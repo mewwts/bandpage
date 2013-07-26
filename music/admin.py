@@ -1,17 +1,21 @@
 from django.contrib import admin
 from music.models import *
+from django.contrib.contenttypes import generic
 
-admin.site.register(SalesLink)
+#admin.site.register(SalesLink)
 # Den tid den sorg
+
+
+class SalesLinkInline(generic.GenericTabularInline):
+    model = SalesLink
 
 
 class AlbumAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {'fields': ['title', 'release_date', 'artwork_img']}),
         ('Vinyl', {'fields': ['is_vinyl', 'vinyl_release_date', 'vinyl_artwork_img']}),
-        # There be sales links
     ]
-
+    inlines = [SalesLinkInline,]
 admin.site.register(Album, AlbumAdmin)
 
 
@@ -22,5 +26,6 @@ class SongAdmin(admin.ModelAdmin):
         ('Single', {'fields': ['is_single', 'single_artwork_img']}),
         # There be sales links
     ]
+    inlines = [SalesLinkInline,]
 
 admin.site.register(Song, SongAdmin)
