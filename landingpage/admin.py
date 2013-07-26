@@ -8,4 +8,6 @@ class LandingAdmin(admin.ModelAdmin):
         ('Content', {'fields': ['title', 'link_url', 'text']}),
         ('Theme', {'fields': ['theme']}),
     ]
+    list_display = ('title', 'homepage')
+    list_editable = ('homepage',)
 admin.site.register(Landingpage, LandingAdmin)
