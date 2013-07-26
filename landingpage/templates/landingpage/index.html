@@ -1,0 +1,10 @@
+
+{% if landingpage %}
+<div id="{{ landingpage.theme }}">
+    <h2> This is a landingpage called {{ landingpage.title }} </h2>
+    <div> {{ landingpage.text }} </div>
+    <div> It has the link {{landingpage.link_url}} </div>
+</div>
+{% else %}
+    <p>Det er ingen ting her</p>
+{% endif %}
