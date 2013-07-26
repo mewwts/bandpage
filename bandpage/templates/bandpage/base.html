@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+{% load staticfiles %}<!DOCTYPE html>
 <html>
 
 <head>
     <title>Kr&aring;kes&oslash;lv &mdash; {% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "bandpage_styles.css" %}" >
 </head>
 
 <body>
@@ -20,6 +21,7 @@
     {% block content %}
         <h1>test!</h1>
     {% endblock content %}
+
 </body>
 
 </html>
