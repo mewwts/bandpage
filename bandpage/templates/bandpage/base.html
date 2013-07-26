@@ -1,4 +1,4 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,6 +6,17 @@
 </head>
 
 <body>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Frontpage</a></li>
+            <li><a href="{% url 'concerts:index' %}">Concerts</a></li>
+            <li><a href="{% url 'music:index' %}">Music</a></li>
+            <li><a href="{% url 'photos:index' %}">Photos</a></li>
+        </ul>
+    </nav>
+
+
     {% block content %}
         <h1>test!</h1>
     {% endblock content %}
