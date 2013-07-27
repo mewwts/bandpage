@@ -18,5 +18,5 @@ urlpatterns = patterns('',
     url(r'^concerts/', include('concerts.urls', namespace='concerts')),
     url(r'^music/', include('music.urls', namespace='music')),
     url(r'^photos/', include('photos.urls', namespace='photos')),
-    url(r'^videos/', include('videos.urls', namespace='videos'))
+    url(r'^videos/', include('videos.urls', namespace='videos')),
 )
