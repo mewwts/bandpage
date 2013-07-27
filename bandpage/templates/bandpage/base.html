@@ -21,20 +21,25 @@
 </head>
 
 <body>
-    
-    <nav>
-        <ul>
-            <li><a href="/">Frontpage</a></li>
-            <li><a href="{% url 'concerts:index' %}">Concerts</a></li>
-            <li><a href="{% url 'music:index' %}">Music</a></li>
-            <li><a href="{% url 'photos:index' %}">Photos</a></li>
-            <li><a href="{% url 'videos:index' %}">Videos</a></li>
-        </ul>
-    </nav>
 
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Frontpage</a></li>
+                <li><a href="{% url 'concerts:index' %}">Concerts</a></li>
+                <li><a href="{% url 'music:index' %}">Music</a></li>
+                <li><a href="{% url 'photos:index' %}">Photos</a></li>
+                <li><a href="{% url 'videos:index' %}">Videos</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
     {% block content %}
         <h1>test!</h1>
     {% endblock content %}
+    </div>
+
 
 </body>
 
