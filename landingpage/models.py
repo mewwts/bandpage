@@ -10,8 +10,9 @@ class Landingpage(models.Model):
     title = models.CharField(max_length=100)
     text = models.TextField(blank=True, null=True)
     link_url = models.URLField(max_length=200, blank=True, null=True)
+    link_text = models.CharField(max_length=200)
     cover_image = models.ImageField(upload_to='temp/folder',
-                                    help_text='dimensions')
+                                    help_text='dimensions', blank=True, null=True)
     theme = models.CharField(choices=THEME_CHOICES, max_length=4)
     homepage = UniqueBooleanField()
 
