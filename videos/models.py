@@ -1,4 +1,5 @@
 from django.db import models
+from music.models import Song
 
 
 class Video(models.Model):
@@ -11,7 +12,7 @@ class Video(models.Model):
     type = models.CharField(choices=PROVIDER_CHOICES, max_length=3)
     text = models.TextField(blank=True, null=True)
     date_published = models.DateField('Date published')
-    # Fix upload urls here
+    song = models.ForeignKey(Song, blank=True, null=True)
     video_id = models.CharField(max_length=60)
 
     def __unicode__(self):
