@@ -1,9 +1,23 @@
 {% load staticfiles %}<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Kr&aring;kes&oslash;lv &mdash; {% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static "bandpage_styles.css" %}" >
+    <meta charset="utf-8">
+    <title>Kråkesølv &mdash; {% block title %}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" type="text/css" href="{% static "styles/bootstrap.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "styles/bandpage.css" %}">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{% static "scripts/bootstrap.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "scripts/bandpage.js" %}"></script>
 </head>
 
 <body>
@@ -17,6 +31,8 @@
             <li><a href="{% url 'videos:index' %}">Videos</a></li>
         </ul>
     </nav>
+
+    æøå
 
 
     {% block content %}
