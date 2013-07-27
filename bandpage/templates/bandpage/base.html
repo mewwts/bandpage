@@ -15,24 +15,36 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="{% static "scripts/bootstrap.min.js" %}"></script>
-    <script type="text/javascript" src="{% static "scripts/bandpage.js" %}"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="{% static "scripts/bootstrap-transition.js" %}"></script>
+    <script src="{% static "scripts/bootstrap-collapse.js" %}"></script>
+    <script src="{% static "scripts/bandpage.js" %}"></script>
 </head>
 
 <body>
 
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="/">Frontpage</a></li>
-                <li><a href="{% url 'concerts:index' %}">Concerts</a></li>
-                <li><a href="{% url 'music:index' %}">Music</a></li>
-                <li><a href="{% url 'photos:index' %}">Photos</a></li>
-                <li><a href="{% url 'videos:index' %}">Videos</a></li>
-            </ul>
-        </nav>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li><a href="{% url 'concerts:index' %}">Concerts</a></li>
+                        <li><a href="{% url 'music:index' %}">Music</a></li>
+                        <li><a href="{% url 'photos:index' %}">Photos</a></li>
+                        <li><a href="{% url 'videos:index' %}">Videos</a></li>
+                        <li><a href="http://twitter.com/krkslv">Twitter</a></li>
+                        <li><a href="http://facebook.com/krakesolv">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <div class="container">
     {% block content %}
@@ -40,6 +52,27 @@
     {% endblock content %}
     </div>
 
+    <div class="container">
+    {% block footer %}
+        <div class="row">
+            <div class="span2">
+                <h5>Booking:</h5>
+                <p>Knut Sannes<br>
+                   977 21 363<br>
+                   <a href="mailto:knut@atomicsoul.no">knut@atomicsoul.no</a>
+                </p>
+            </div>
+
+            <div class="span2">
+                <h5>Presse/promo:</h5>
+                <p>Erle Strøm<br>
+                   990 04 303<br>
+                   <a href="mailto:erle@hes.no">erle@hes.no</a>
+                </p>
+            </div>
+        </div>
+    {% endblock footer %}
+    </div>
 
 </body>
 
