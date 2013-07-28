@@ -6,8 +6,7 @@ from datetime import date
 
 def index(request):
     album_list = Album.objects.all()
-    song_list = Song.objects.all()
-    single_list = [song for song in song_list if song.is_single]
+    single_list = [song for song in Song.objects.all() if song.is_single]
     vinyl_list = [album for album in album_list if album.is_vinyl]
 
     context = {'album_list': album_list,
@@ -16,16 +15,9 @@ def index(request):
 
     return render(request, 'music/index.html', context)
 
-def lyrics(request):
-    song_list = Song.objects.all()
-    #album_list = [album for sublist in [song.album.all() for song in song_list] for album in sublist if album.release_date <= date.today()]
-    lyrics = dict((album, []) for album in Album.objects.all())
-    for album in lyrics.keys():
-        for song in song_list:
-            if album in song.album.all():
-                lyrics[album].append(song)
 
-    context = {'lyrics': lyrics,
-               }
+def lyrics(request):
+    lyrics = dict((album, [song for song in Song.objects.all() if album in song.album.all()]) for album in Album.objects.all())
+    context = {'lyrics': lyrics}
 
     return render(request, 'music/lyrics.html', context)

@@ -2,9 +2,6 @@ from django.contrib import admin
 from music.models import *
 from django.contrib.contenttypes import generic
 
-#admin.site.register(SalesLink)
-# Den sorgen tok yours truly og fikset ;-)
-
 
 class SalesLinkInline(generic.GenericTabularInline):
     model = SalesLink

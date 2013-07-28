@@ -56,6 +56,12 @@ class Song(models.Model):
     def __unicode__(self):
         return u'%s' % (self.title)
 
+    def __save__(self, *args, **kvargs):
+        print self.single_artwork_img
+        if self.is_single and self.single_artwork_img == None:
+            return # never save a single without artwork
+        else:
+            super(Song, self).__save__(*args, **kvargs)
 
 ##  TODO
 ##  Media root in settings file
