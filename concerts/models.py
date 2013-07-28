@@ -3,7 +3,7 @@ from django.utils import timezone
 
 
 class Concert(models.Model):
-    date = models.DateField('event date')
+    date = models.DateTimeField('event date')
     city = models.CharField(max_length=30)
     venue = models.CharField(max_length=100)
     ticket_url = models.URLField(max_length=200, blank=True, null=True)

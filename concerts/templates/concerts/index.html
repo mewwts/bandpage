@@ -4,37 +4,40 @@
 
 {% block content %}
 
-    {% if concert_list %}
-        <table class="table table-hover">
-            <thead>
+    {% for concert_list in concert_lists %}
+        {% if concert_list == concert_lists.0 %}
+            <h1>Upcoming concerts</h1>
+        {% else %}
+            <h1>Past concerts</h1>
+        {% endif %}
+        {% if concert_list %}
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                    <th><h5><i class="icon-calendar"></i></h5></th>
+                    <th><h5><i class="icon-map-marker"></i>City</h5></th>
+                    <th><h5><i class="icon-home"></i>Venue</h5></th>
+                    <th></th>
+                    </tr>
+                </thead>
+
+            {% for concert in concert_list %}
                 <tr>
-                <th><h5><i class="icon-calendar"></i></h5></th>
-                <th><h5><i class="icon-map-marker"></i>City</h5></th>
-                <th><h5><i class="icon-home"></i>Venue</h5></th>
-                <th></th>
+                    <td>{{ concert.date }}</td>
+                    <td>{{ concert.city }}</td>
+                    <td>{{ concert.venue }}</td>
+                    <td>
+                        {% if concert.ticket_url %}
+                        <a href="{{ concert.ticket_url }}"><span class="label label-inverse">Kjøp billett</span></a>
+                        {% endif %}
+                    </td>
                 </tr>
-            </thead>
-        {% for concert in concert_list %}
-            <tr>
-                <td>
-                    {{ concert.date }}
-                </td>
-                <td>
-                    {{ concert.city }}
-                </td>
-                <td>
-                    {{ concert.venue }}
-                </td>
-                <td>
-                    {% if concert.ticket_url %}
-                    <a href="{{ concert.ticket_url }}">Kjoep billett</a>
-                    {% endif %}
-                </td>
-            </tr>
-        {% endfor %}
-        </table>
-    {% else %}
-        <p>There are no concerts to display.</p>
-    {% endif %}
+            {% endfor %}
+            </table>
+        {% else %}
+            <p>There are no concerts to display.</p>
+        {% endif %}
+
+    {% endfor %}
 
 {% endblock content %}
