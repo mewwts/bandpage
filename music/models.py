@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
+from django.core.exceptions import ValidationError
 
 
 class SalesLink(models.Model):
@@ -40,6 +41,10 @@ class Album(models.Model):
     def __unicode__(self):
         return u'%s' % (self.title)
 
+    def clean(self):
+        if self.is_vinyl and not (self.vinyl_artwork_img and self.vinyl_release_date):
+            raise ValidationError('Vinyls must have artwork and a release date')
+
 
 class Song(models.Model):
     title = models.CharField(max_length=200)
@@ -56,12 +61,9 @@ class Song(models.Model):
     def __unicode__(self):
         return u'%s' % (self.title)
 
-    def __save__(self, *args, **kvargs):
-        print self.single_artwork_img
-        if self.is_single and self.single_artwork_img == None:
-            return # never save a single without artwork
-        else:
-            super(Song, self).__save__(*args, **kvargs)
+    def clean(self):
+        if self.is_single and not self.single_artwork_img:
+            raise ValidationError('Singles need artwork')
 
 ##  TODO
 ##  Media root in settings file
