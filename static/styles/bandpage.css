@@ -1,3 +1,33 @@
 body {
-  padding-top: 40px;
+  background: lightgray;
+}
+header {
+  background: #222222;
+  padding: 20px 0;
+  color: #000000;
+}
+section {
+  background: #ffffff;
+  padding: 20px 0;
+  color: #404040;
+}
+footer {
+  background: #d3d3d3;
+  padding: 20px 0;
+  color: #141414;
+}
+body#concerts table .date {
+  width: 15%;
+}
+body#concerts table .city {
+  width: 25%;
+}
+body#concerts table .venue {
+  width: 25%;
+}
+body#concerts table .facebook {
+  width: 15%;
+}
+body#concerts table .tickets {
+  width: 15%;
 }
