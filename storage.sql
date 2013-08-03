@@ -1,4 +1,3 @@
-PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE "auth_permission" (
     "id" integer NOT NULL PRIMARY KEY,
@@ -138,6 +137,7 @@ INSERT INTO "django_admin_log" VALUES(6,'2013-08-03 20:29:55.522541',1,8,'3','as
 INSERT INTO "django_admin_log" VALUES(7,'2013-08-03 20:36:02.017969',1,8,'4','asd2-2013-08-29 22:35:56+02:00',1,'');
 INSERT INTO "django_admin_log" VALUES(8,'2013-08-03 20:42:12.328656',1,8,'5','Feskerby-2013-08-27 22:42:04+02:00',1,'');
 INSERT INTO "django_admin_log" VALUES(9,'2013-08-03 20:51:14.600750',1,8,'6','asdfasdf-2013-08-03 22:51:09+02:00',1,'');
+INSERT INTO "django_admin_log" VALUES(10,'2013-08-03 20:55:32.369671',1,8,'7','jasdjasdf-2013-08-03 22:55:27+02:00',1,'');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -153,6 +153,7 @@ INSERT INTO "concerts_concert" VALUES(3,'2013-08-03 20:29:48','asdasd','asdasd',
 INSERT INTO "concerts_concert" VALUES(4,'2013-08-29 20:35:56','asdasd2','asd2','','',0);
 INSERT INTO "concerts_concert" VALUES(5,'2013-08-27 20:42:04','Feskermann','Feskerby','','',0);
 INSERT INTO "concerts_concert" VALUES(6,'2013-08-03 20:51:09','fittebyen','asdfasdf','','',0);
+INSERT INTO "concerts_concert" VALUES(7,'2013-08-03 20:55:27','jajajajaj','jasdjasdf','','',0);
 CREATE TABLE "landingpage_landingpage" (
     "id" integer NOT NULL PRIMARY KEY,
     "slug" varchar(30) NOT NULL,
