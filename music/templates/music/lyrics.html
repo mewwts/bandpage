@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Lyrics {% endblock title %}
+
+{% block content %}
+
+<h2> Tekster </h2>
+{% if lyrics %}
+    <ul>
+    {% for album, songs in lyrics.items %}
+        <h2>{{album.title}}</h2> 
+        {% for song in songs %}
+            <h4>{{ song.title }}</h4>
+            <p>{{ song.lyrics }}</p>
+        {% endfor %}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Ingen tekster to display her :(</p>
+{% endif %}
+
+{%endblock content%}
