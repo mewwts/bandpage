@@ -3,15 +3,23 @@
 {% block title %}Photos{% endblock title %}
 
 {% block content %}
-
-    {% if photo_list %}
+    <div class="row">
+        {% if photo_list %}
         <ul>
-        {% for photo in photo_list %}
+            {% for photo in photo_list %}
             <li>{{ photo.title }}, Foto: {{ photo.photographer }}</li>
-        {% endfor %}
+            {% endfor %}
         </ul>
-    {% else %}
-        <p>There are no photos to display.</p>
-    {% endif %}
+        {% else %}
+        <div class="col-12">
+            <h1>Eeeh…</h1>
+            <p class="lead">There are no photos to display.</p>
+        </div>
+        {% endif %}
+    </div>
+
+
+<a href="/foto/presse/krakesolv3_KristinaKvammen.jpg"><img class="img-polaroid" src="http://krakesolv.no/foto/presse/small/krake_small03.png"></a>
+<p><strong>Foto: </strong>Kristina Kvammen</p>
     
 {% endblock content %}
