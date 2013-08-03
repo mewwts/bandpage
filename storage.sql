@@ -1,4 +1,3 @@
-PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE "auth_permission" (
     "id" integer NOT NULL PRIMARY KEY,
@@ -140,6 +139,10 @@ INSERT INTO "django_admin_log" VALUES(8,'2013-08-03 20:42:12.328656',1,8,'5','Fe
 INSERT INTO "django_admin_log" VALUES(9,'2013-08-03 20:51:14.600750',1,8,'6','asdfasdf-2013-08-03 22:51:09+02:00',1,'');
 INSERT INTO "django_admin_log" VALUES(10,'2013-08-03 20:55:32.369671',1,8,'7','jasdjasdf-2013-08-03 22:55:27+02:00',1,'');
 INSERT INTO "django_admin_log" VALUES(11,'2013-08-03 20:56:38.722256',1,8,'8','asdfasdfasdfasdfasdf-2013-08-03 22:56:34+02:00',1,'');
+INSERT INTO "django_admin_log" VALUES(12,'2013-08-03 21:10:53.965510',1,10,'1','Testbilde',1,'');
+INSERT INTO "django_admin_log" VALUES(13,'2013-08-03 21:18:35.542472',1,10,'2','Testbilde2',1,'');
+INSERT INTO "django_admin_log" VALUES(14,'2013-08-03 21:22:55.261070',1,10,'3','Testbilde3',1,'');
+INSERT INTO "django_admin_log" VALUES(15,'2013-08-03 21:55:22.253479',1,10,'4','asd',1,'');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -175,6 +178,10 @@ CREATE TABLE "photos_photo" (
     "thumbnail" varchar(100) NOT NULL,
     "image" varchar(100) NOT NULL
 );
+INSERT INTO "photos_photo" VALUES(1,'Testbilde','Kristina Kvammen','temp/folder/thumb.png','temp/folder/stor.jpg');
+INSERT INTO "photos_photo" VALUES(2,'Testbilde2','Fesker, feskersen','temp/folder/thumb_1.png','temp/folder/stor_1.jpg');
+INSERT INTO "photos_photo" VALUES(3,'Testbilde3','','temp/folder/thumb_2.png','temp/folder/stor_2.jpg');
+INSERT INTO "photos_photo" VALUES(4,'asd','asd','temp/folder/thumb.png','temp/folder/stor.jpg');
 CREATE TABLE "music_saleslink" (
     "id" integer NOT NULL PRIMARY KEY,
     "type" varchar(2) NOT NULL,

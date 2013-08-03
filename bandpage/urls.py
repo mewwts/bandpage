@@ -1,4 +1,6 @@
 from django.conf.urls import patterns, include, url
+from django.conf import settings
+from django.conf.urls.static import static
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -19,4 +21,4 @@ urlpatterns = patterns('',
     url(r'^music/', include('music.urls', namespace='music')),
     url(r'^photos/', include('photos.urls', namespace='photos')),
     url(r'^videos/', include('videos.urls', namespace='videos')),
-)
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
