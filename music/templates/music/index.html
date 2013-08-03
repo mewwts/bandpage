@@ -15,7 +15,7 @@
                 <div class="col-12 col-sm-6 col-lg-4 release album">
                     {{ album.title }}, {{ album.release_date }},
                     {% for sales_link in album.sales_link.all %}
-                        <a href="{{ sales_link.url }}" class="{{ sales_link.type }}">{{ sales_link.text }}</a>
+                        <a href="{{ sales_link.url }}" title="{{ sales_link.text }} class="{{ sales_link.type }}">{{ sales_link.text }}</a>
                     {% endfor %}
                 </div>
                 {% endfor %}
@@ -31,7 +31,9 @@
             {% for single in single_list %}
             <div class="col-12 col-sm-6 col-lg-4 release album">
                 {{ single.title }}, {{ single.release_date }},
-                <a href="{{ single.sales_link }}">Kjoep</a>
+                {% for sales_link in single.sales_link.all %}
+                    <a href="{{ sales_link.url }} title="{{ sales_link.text }} class="{{ sales_link.type }}">{{ sales_link.text }}</a>
+                {% endfor %}
             </div>
             {% endfor %}
 
@@ -47,7 +49,9 @@
             {% for vinyl in vinyl_list %}
             <div class="col-12 col-sm-6 col-lg-4 release album">
                 {{ vinyl.title }}, {{ vinyl.vinyl_release_date }},
-                <a href="{{ album.sales_link }}">Kjøp</a>
+                {% for sales_link in vinyl.sales_link.all %}
+                    <a href="{{ sales_link.url }}" title="{{ sales_link.text }} class="{{ sales_link.type }}">{{ sales_link.text }}</a>
+                {% endfor %}
             </div>
             {% endfor %}
         </div>
