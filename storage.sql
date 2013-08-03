@@ -133,6 +133,7 @@ INSERT INTO "django_admin_log" VALUES(2,'2013-08-03 19:02:11.035781',1,13,'1','S
 INSERT INTO "django_admin_log" VALUES(3,'2013-08-03 19:02:34.259513',1,13,'1','Supersangen',2,'Changed lyrics.');
 INSERT INTO "django_admin_log" VALUES(4,'2013-08-03 20:13:56.704614',1,8,'1','test5-2013-08-03 22:13:52+02:00',1,'');
 INSERT INTO "django_admin_log" VALUES(5,'2013-08-03 20:25:09.014027',1,8,'2','asd-2013-08-03 22:25:05+02:00',1,'');
+INSERT INTO "django_admin_log" VALUES(6,'2013-08-03 20:29:55.522541',1,8,'3','asdasd-2013-08-03 22:29:48+02:00',1,'');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -144,6 +145,7 @@ CREATE TABLE "concerts_concert" (
 );
 INSERT INTO "concerts_concert" VALUES(1,'2013-08-03 20:13:52','Test4','test5','','',0);
 INSERT INTO "concerts_concert" VALUES(2,'2013-08-03 20:25:05','asd','asd','','',0);
+INSERT INTO "concerts_concert" VALUES(3,'2013-08-03 20:29:48','asdasd','asdasd','','',0);
 CREATE TABLE "landingpage_landingpage" (
     "id" integer NOT NULL PRIMARY KEY,
     "slug" varchar(30) NOT NULL,
