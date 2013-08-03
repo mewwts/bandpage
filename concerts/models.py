@@ -11,7 +11,7 @@ class Concert(models.Model):
     is_sold_out = models.BooleanField()
 
     def __unicode__(self):
-        return self.venue + '-' +str(self.date)
+        return self.venue + '-' + str(self.date)
 
     def is_upcoming(self):
-        return self.date > timezone.now()
+            return self.date > timezone.now()

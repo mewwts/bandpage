@@ -10,4 +10,5 @@ class LandingAdmin(admin.ModelAdmin):
     ]
     list_display = ('title', 'homepage')
     list_editable = ('homepage',)
+
 admin.site.register(Landingpage, LandingAdmin)
