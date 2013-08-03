@@ -9,7 +9,6 @@
     <meta name="author" content="">
 
     <link rel="stylesheet" type="text/css" href="{% static "styles/bootstrap.css" %}">
-    <link rel="stylesheet" type="text/css" href="{% static "styles/bandpage.css" %}">
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -23,21 +22,31 @@
 <body{% block body_id %}{% endblock body_id %}>
 
     <header>
-        <div class="container">
+        <div class="nav-collapse">
             <div class="navbar navbar-inverse">
-                <a class="navbar-brand" href="/">Bandname</a>
-                <ul class="nav navbar-nav">
-                    <li><a href="{% url 'concerts:index' %}">Concerts</a></li>
-                    <li><a href="{% url 'music:index' %}">Music</a></li>
-                    <li><a href="{% url 'photos:index' %}">Photos</a></li>
-                    <li><a href="{% url 'videos:index' %}">Videos</a></li>
-                    <li><a href="http://twitter.com/krkslv">Twitter</a></li>
-                    <li><a href="http://facebook.com/krakesolv">Facebook</a></li>
-                </ul>
+                <div class="container">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Bandname</a>
+                    <nav>
+                        <div class="nav-collapse collapse navbar-responsive-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="{% url 'concerts:index' %}">Concerts</a></li>
+                                <li><a href="{% url 'music:index' %}">Music</a></li>
+                                <li><a href="{% url 'photos:index' %}">Photos</a></li>
+                                <li><a href="{% url 'videos:index' %}">Videos</a></li>
+                                <li><a href="http://twitter.com/krkslv">Twitter</a></li>
+                                <li><a href="http://facebook.com/krakesolv">Facebook</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
-
 
     <section class="content">
         <div class="container">
