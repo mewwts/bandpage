@@ -1,15 +1,30 @@
 {% extends 'base.html' %}
 
-{% block title %}Photos{% endblock title %}
+{% block title %} &mdash; Photos{% endblock title %}
+
+{% block body_id %} id="photos"{% endblock body_id %}
 
 {% block content %}
     <div class="row">
         {% if photo_list %}
-        <ul>
+            <div class="col-12">
+                <h1>Photos</h1>
+                <hr>
+            </div>
             {% for photo in photo_list %}
-            <li>{{ photo.title }}, Foto: {{ photo.photographer }}</li>
+            <div class="col-12 col-sm-6 col-lg-4 photo">
+                <a href="{{ photo.image }}" alt="{{ photo.title }}">
+                    <!--<img class="img-responsive" src="{{ photo.thumb }}">-->
+                    <img class="img-responsive" src="http://krakesolv.no/foto/presse/small/krake_small03.png">
+                    {% if photo.photographer %}
+                        <p class="byline">Foto: <strong>{{ photo.photographer }}</strong></p>
+                    {% else %}
+                        <p class="byline">&nbsp;</p>
+                    {% endif %}
+                </a>
+
+            </div>
             {% endfor %}
-        </ul>
         {% else %}
         <div class="col-12">
             <h1>Eeeh…</h1>
@@ -17,9 +32,5 @@
         </div>
         {% endif %}
     </div>
-
-
-<a href="/foto/presse/krakesolv3_KristinaKvammen.jpg"><img class="img-polaroid" src="http://krakesolv.no/foto/presse/small/krake_small03.png"></a>
-<p><strong>Foto: </strong>Kristina Kvammen</p>
     
 {% endblock content %}
