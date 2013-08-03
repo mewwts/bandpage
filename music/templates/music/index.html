@@ -1,42 +1,68 @@
 {% extends 'base.html' %}
 
-{% block title %}Music{% endblock title %}
+{% block title %} &mdash; Music{% endblock title %}
 
 {% block content %}
 
-    <h2> Album </h2>
-    {% if album_list %}
-        <ul>
-        {% for album in album_list %}
-            <li>{{ album.title }}, {{ album.release_date }},
-                <a href="{{ album.sales_link }}">Kjoep</a></li>
-        {% endfor %}
-        </ul>
+    {% if album_list or single_list or vinyl_list %}
+        {% if album_list %}
+            <div class="row">
+                <div class="col-12">
+                    <h1>Albums</h1>
+                    <hr>
+                </div>
+                {% for album in album_list %}
+                <div class="col-12 col-sm-6 col-lg-4 release album">
+                    {{ album.title }}, {{ album.release_date }},
+                    {% for sales_link in album.sales_link.all %}
+                        <a href="{{ sales_link.url }}" class="{{ sales_link.type }}">{{ sales_link.text }}</a>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if single_list %}
+        <div class="row">
+            <div class="col-12">
+                <h1>Singles</h1>
+                <hr>
+            </div>
+            {% for single in single_list %}
+            <div class="col-12 col-sm-6 col-lg-4 release album">
+                {{ single.title }}, {{ single.release_date }},
+                <a href="{{ single.sales_link }}">Kjoep</a>
+            </div>
+            {% endfor %}
+
+        </div>
+        {% endif %}
+
+        {% if vinyl_list %}
+        <div class="row">
+            <div class="col-12">
+                <h1>Vinyls</h1>
+                <hr>
+            </div>
+            {% for vinyl in vinyl_list %}
+            <div class="col-12 col-sm-6 col-lg-4 release album">
+                {{ vinyl.title }}, {{ vinyl.vinyl_release_date }},
+                <a href="{{ album.sales_link }}">Kjøp</a>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% endif %}
+
     {% else %}
-        <p>Ingen album her :(</p>
+        <div class="row">
+            <div class="col-12">
+                <h1>Eeeh…</h1>
+                <p class="lead">There is no music to display</p>
+                <hr>
+            </div>
+        </div>
     {% endif %}
 
-    <h2> Singler </h2>
-    {% if single_list %}
-        <ul>
-        {% for single in single_list %}
-            <li>{{ single.title }}, {{ single.release_date }},
-                <a href="{{ single.sales_link }}">Kjoep</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>Ingen singler her :(</p>
-    {% endif %}
-
-    <h2> Vinyler </h2>
-    {% if vinyl_list %}
-        <ul>
-        {% for vinyl in vinyl_list %}
-            <li>{{ vinyl.title }}, {{ vinyl.vinyl_release_date }},<a href="{{ album.sales_link }}">Kjoep</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>Ingen vinyler her :(</p>
-    {% endif %}
 
 {% endblock content %}
