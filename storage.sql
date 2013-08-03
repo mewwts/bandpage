@@ -1,4 +1,3 @@
-PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE "auth_permission" (
     "id" integer NOT NULL PRIMARY KEY,
@@ -84,7 +83,7 @@ CREATE TABLE "auth_user" (
     "is_active" bool NOT NULL,
     "date_joined" datetime NOT NULL
 );
-INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-08-03 19:02:02.455833',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
+INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-08-03 20:13:48.422110',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
 CREATE TABLE "django_content_type" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(100) NOT NULL,
@@ -112,6 +111,7 @@ CREATE TABLE "django_session" (
     "expire_date" datetime NOT NULL
 );
 INSERT INTO "django_session" VALUES('5p1o9ytikmao4uhavde27ffjz67qudfo','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-08-17 19:02:02.457758');
+INSERT INTO "django_session" VALUES('jcdfaj5m0vjwkgw109c56k5uei4nerxb','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-08-17 20:13:48.427418');
 CREATE TABLE "django_site" (
     "id" integer NOT NULL PRIMARY KEY,
     "domain" varchar(100) NOT NULL,
@@ -131,6 +131,7 @@ CREATE TABLE "django_admin_log" (
 INSERT INTO "django_admin_log" VALUES(1,'2013-08-03 19:02:09.044459',1,12,'1','Natsa',1,'');
 INSERT INTO "django_admin_log" VALUES(2,'2013-08-03 19:02:11.035781',1,13,'1','Supersangen',1,'');
 INSERT INTO "django_admin_log" VALUES(3,'2013-08-03 19:02:34.259513',1,13,'1','Supersangen',2,'Changed lyrics.');
+INSERT INTO "django_admin_log" VALUES(4,'2013-08-03 20:13:56.704614',1,8,'1','test5-2013-08-03 22:13:52+02:00',1,'');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -140,6 +141,7 @@ CREATE TABLE "concerts_concert" (
     "facebook_url" varchar(200),
     "is_sold_out" bool NOT NULL
 );
+INSERT INTO "concerts_concert" VALUES(1,'2013-08-03 20:13:52','Test4','test5','','',0);
 CREATE TABLE "landingpage_landingpage" (
     "id" integer NOT NULL PRIMARY KEY,
     "slug" varchar(30) NOT NULL,

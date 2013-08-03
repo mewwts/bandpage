@@ -5,6 +5,8 @@
 {% block body_id %} id="concerts"{% endblock body_id %}
 
 {% block content %}
+    <div class="row">
+        <div class="col-12">
     {% for concerts in concert_lists %}
         {% if concerts == concert_lists.0 %}
             <h2>Upcoming concerts</h2>
@@ -47,5 +49,7 @@
         {% endif %}
 
     {% endfor %}
+        </div>
+    </div>
 
 {% endblock content %}
