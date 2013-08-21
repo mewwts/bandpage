@@ -1,3 +1,4 @@
+PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE "auth_permission" (
     "id" integer NOT NULL PRIMARY KEY,
@@ -83,7 +84,7 @@ CREATE TABLE "auth_user" (
     "is_active" bool NOT NULL,
     "date_joined" datetime NOT NULL
 );
-INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-08-03 20:13:48.422110',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
+INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-08-21 17:17:53.518616',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
 CREATE TABLE "django_content_type" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(100) NOT NULL,
@@ -112,6 +113,7 @@ CREATE TABLE "django_session" (
 );
 INSERT INTO "django_session" VALUES('5p1o9ytikmao4uhavde27ffjz67qudfo','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-08-17 19:02:02.457758');
 INSERT INTO "django_session" VALUES('jcdfaj5m0vjwkgw109c56k5uei4nerxb','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-08-17 20:13:48.427418');
+INSERT INTO "django_session" VALUES('zp6b3jiieqoyugko9cxqgo8s4e9yv24r','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-09-04 17:17:53.520681');
 CREATE TABLE "django_site" (
     "id" integer NOT NULL PRIMARY KEY,
     "domain" varchar(100) NOT NULL,
@@ -149,6 +151,11 @@ INSERT INTO "django_admin_log" VALUES(18,'2013-08-03 23:04:08.607607',1,12,'2','
 INSERT INTO "django_admin_log" VALUES(19,'2013-08-03 23:05:58.517153',1,12,'2','Feskslog',2,'Changed is_vinyl, vinyl_release_date and vinyl_artwork_img.');
 INSERT INTO "django_admin_log" VALUES(20,'2013-08-03 23:06:33.405532',1,13,'2','Test',1,'');
 INSERT INTO "django_admin_log" VALUES(21,'2013-08-03 23:07:03.416563',1,13,'2','Test',2,'Changed is_single and single_artwork_img.');
+INSERT INTO "django_admin_log" VALUES(22,'2013-08-21 17:18:31.495759',1,10,'5','Krk',1,'');
+INSERT INTO "django_admin_log" VALUES(23,'2013-08-21 17:21:22.786251',1,10,'4','asd',3,'');
+INSERT INTO "django_admin_log" VALUES(24,'2013-08-21 17:21:22.789279',1,10,'3','Testbilde3',3,'');
+INSERT INTO "django_admin_log" VALUES(25,'2013-08-21 17:21:22.790418',1,10,'2','Testbilde2',3,'');
+INSERT INTO "django_admin_log" VALUES(26,'2013-08-21 17:21:22.791608',1,10,'1','Testbilde',3,'');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -184,10 +191,7 @@ CREATE TABLE "photos_photo" (
     "thumbnail" varchar(100) NOT NULL,
     "image" varchar(100) NOT NULL
 );
-INSERT INTO "photos_photo" VALUES(1,'Testbilde','Kristina Kvammen','temp/folder/thumb.png','temp/folder/stor.jpg');
-INSERT INTO "photos_photo" VALUES(2,'Testbilde2','Fesker, feskersen','temp/folder/thumb_1.png','temp/folder/stor_1.jpg');
-INSERT INTO "photos_photo" VALUES(3,'Testbilde3','','temp/folder/thumb_2.png','temp/folder/stor_2.jpg');
-INSERT INTO "photos_photo" VALUES(4,'asd','asd','temp/folder/thumb.png','temp/folder/stor.jpg');
+INSERT INTO "photos_photo" VALUES(5,'Krk','superkrk','thumbs/IMG_4607.JPG','images/old.png');
 CREATE TABLE "music_saleslink" (
     "id" integer NOT NULL PRIMARY KEY,
     "type" varchar(2) NOT NULL,
