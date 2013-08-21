@@ -1,4 +1,3 @@
-PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE "auth_permission" (
     "id" integer NOT NULL PRIMARY KEY,
@@ -84,7 +83,7 @@ CREATE TABLE "auth_user" (
     "is_active" bool NOT NULL,
     "date_joined" datetime NOT NULL
 );
-INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-08-21 17:17:53.518616',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
+INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-08-21 18:45:23.502216',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
 CREATE TABLE "django_content_type" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(100) NOT NULL,
@@ -114,6 +113,7 @@ CREATE TABLE "django_session" (
 INSERT INTO "django_session" VALUES('5p1o9ytikmao4uhavde27ffjz67qudfo','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-08-17 19:02:02.457758');
 INSERT INTO "django_session" VALUES('jcdfaj5m0vjwkgw109c56k5uei4nerxb','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-08-17 20:13:48.427418');
 INSERT INTO "django_session" VALUES('zp6b3jiieqoyugko9cxqgo8s4e9yv24r','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-09-04 17:17:53.520681');
+INSERT INTO "django_session" VALUES('ayf1sphrrrhpfhclg83ykq6r0t1i44n2','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-09-04 18:45:23.526319');
 CREATE TABLE "django_site" (
     "id" integer NOT NULL PRIMARY KEY,
     "domain" varchar(100) NOT NULL,
@@ -158,6 +158,7 @@ INSERT INTO "django_admin_log" VALUES(25,'2013-08-21 17:21:22.790418',1,10,'2','
 INSERT INTO "django_admin_log" VALUES(26,'2013-08-21 17:21:22.791608',1,10,'1','Testbilde',3,'');
 INSERT INTO "django_admin_log" VALUES(27,'2013-08-21 18:33:21.878701',1,10,'5','Krk',3,'');
 INSERT INTO "django_admin_log" VALUES(28,'2013-08-21 18:33:36.765908',1,10,'1','Mongo',1,'');
+INSERT INTO "django_admin_log" VALUES(29,'2013-08-21 18:45:46.246047',1,8,'3','asdasd-2013-08-03 22:29:48+02:00',2,'Changed ticket_url and facebook_url.');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -169,7 +170,7 @@ CREATE TABLE "concerts_concert" (
 );
 INSERT INTO "concerts_concert" VALUES(1,'2013-08-03 20:13:52','Test4','test5','','',0);
 INSERT INTO "concerts_concert" VALUES(2,'2013-08-03 20:25:05','asd','asd','','',0);
-INSERT INTO "concerts_concert" VALUES(3,'2013-08-03 20:29:48','asdasd','asdasd','','',0);
+INSERT INTO "concerts_concert" VALUES(3,'2013-08-03 20:29:48','asdasd','asdasd','http://db.no/','http://facebook.com/',0);
 INSERT INTO "concerts_concert" VALUES(4,'2013-08-29 20:35:56','asdasd2','asd2','','',0);
 INSERT INTO "concerts_concert" VALUES(5,'2013-08-27 20:42:04','Feskermann','Feskerby','','',0);
 INSERT INTO "concerts_concert" VALUES(6,'2013-08-03 20:51:09','fittebyen','asdfasdf','','',0);
