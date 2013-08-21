@@ -156,6 +156,8 @@ INSERT INTO "django_admin_log" VALUES(23,'2013-08-21 17:21:22.786251',1,10,'4','
 INSERT INTO "django_admin_log" VALUES(24,'2013-08-21 17:21:22.789279',1,10,'3','Testbilde3',3,'');
 INSERT INTO "django_admin_log" VALUES(25,'2013-08-21 17:21:22.790418',1,10,'2','Testbilde2',3,'');
 INSERT INTO "django_admin_log" VALUES(26,'2013-08-21 17:21:22.791608',1,10,'1','Testbilde',3,'');
+INSERT INTO "django_admin_log" VALUES(27,'2013-08-21 18:33:21.878701',1,10,'5','Krk',3,'');
+INSERT INTO "django_admin_log" VALUES(28,'2013-08-21 18:33:36.765908',1,10,'1','Mongo',1,'');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -191,7 +193,7 @@ CREATE TABLE "photos_photo" (
     "thumbnail" varchar(100) NOT NULL,
     "image" varchar(100) NOT NULL
 );
-INSERT INTO "photos_photo" VALUES(5,'Krk','superkrk','thumbs/IMG_4607.JPG','images/old.png');
+INSERT INTO "photos_photo" VALUES(1,'Mongo','Leon','thumbs/tor.png','images/tor.png');
 CREATE TABLE "music_saleslink" (
     "id" integer NOT NULL PRIMARY KEY,
     "type" varchar(2) NOT NULL,
