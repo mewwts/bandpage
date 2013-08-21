@@ -13,9 +13,9 @@
             </div>
             {% for photo in photo_list %}
             <div class="col-12 col-sm-6 col-lg-4 photo">
-                <a href="{{ photo.image }}" alt="{{ photo.title }}">
+                <a href="{{ photo.image.url }}" alt="{{ photo.title }}">
                     <!--<img class="img-responsive" src="{{ photo.thumb }}">-->
-                    <img class="img-responsive" src="http://krakesolv.no/foto/presse/small/krake_small03.png">
+                    <img class="img-responsive" src="{{ photo.thumbnail.url }}">
                     {% if photo.photographer %}
                         <p class="byline">Foto: <strong>{{ photo.photographer }}</strong></p>
                     {% else %}
