@@ -22,32 +22,33 @@
 <body{% block body_id %}{% endblock body_id %}>
 
     <header>
-        <div class="nav-collapse">
-            <div class="navbar navbar-inverse">
-                <div class="container">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">Bandname</a>
-                    <nav>
-                        <div class="nav-collapse collapse navbar-responsive-collapse">
-                            <ul class="nav navbar-nav">
-                                <li><a href="{% url 'concerts:index' %}">Concerts</a></li>
-                                <li><a href="{% url 'music:index' %}">Music</a></li>
-                                <li><a href="{% url 'photos:index' %}">Photos</a></li>
-                                <li><a href="{% url 'videos:index' %}">Videos</a></li>
-                                <li><a href="{% url 'music:lyrics' %}">Lyrics</a></li>
-                                <li><a href="http://twitter.com/krkslv">Twitter</a></li>
-                                <li><a href="http://facebook.com/krakesolv">Facebook</a></li>
-                            </ul>
-                        </div>
-                    </nav>
+                    <a class="navbar-brand" href="#">Bandpage</a>
                 </div>
-            </div>
+
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{% url 'concerts:index' %}">Concerts</a></li>
+                        <li><a href="{% url 'music:index' %}">Music</a></li>
+                        <li><a href="{% url 'photos:index' %}">Photos</a></li>
+                        <li><a href="{% url 'videos:index' %}">Videos</a></li>
+                        <li><a href="{% url 'music:lyrics' %}">Lyrics</a></li>
+                        <li><a href="http://twitter.com/krkslv">Twitter</a></li>
+                        <li><a href="http://facebook.com/krakesolv">Facebook</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </header>
+
 
     <section class="content">
         <div class="container">
@@ -60,8 +61,8 @@
     <footer>
         <div class="container">
         {% block footer %}
-            <div class="row">
-                <div class="col-lg-4 col-6">
+            <div id="contact-info">
+                <div id="booking">
                     <h3>Booking:</h3>
                     <p>Knut Sannes<br>
                        977 21 363<br>
@@ -69,7 +70,7 @@
                     </p>
                 </div>
 
-                <div class="col-lg-4 col-6">
+                <div id="promo">
                     <h3>Presse/promo:</h3>
                     <p>Erle Strøm<br>
                        990 04 303<br>

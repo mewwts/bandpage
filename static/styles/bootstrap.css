@@ -5440,6 +5440,11 @@ a:hover {
   text-decoration: none;
   border-color: #990000;
 }
+@media (min-width: 992px) {
+  body {
+    font-size: 16px;
+  }
+}
 /*  Header
 -------------------------- */
 header {
@@ -5448,25 +5453,11 @@ header {
   color: #000000;
 }
 header .navbar {
+  border: 0;
   margin-bottom: 0;
 }
-header .navbar .navbar-brand {
-  padding-top: 20px;
-  padding-bottom: 20px;
+header .navbar a {
   border: 0;
-}
-header .navbar nav {
-  float: left;
-}
-header .navbar nav ul.navbar-nav li a {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: 0;
-}
-@media (min-width: 768px) {
-  header .navbar .navbar-brand {
-    float: right;
-  }
 }
 /*  Page
 -------------------------- */
@@ -5480,7 +5471,44 @@ footer {
   padding: 40px 0;
   color: #292929;
 }
-/*  Page specific styles
+footer #contact-info {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+footer #contact-info:before,
+footer #contact-info:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+footer #contact-info:after {
+  clear: both;
+}
+footer #contact-info:before,
+footer #contact-info:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+footer #contact-info:after {
+  clear: both;
+}
+footer #contact-info #booking,
+footer #contact-info #promo {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/*  Page specific: Concerts
 -------------------------- */
 body#concerts table .date {
   width: 15%;
@@ -5507,6 +5535,8 @@ body#concerts table .label:hover,
 body#concerts table .label:focus {
   background: #990000;
 }
+/*  Page specific: Photos 
+-------------------------- */
 body#photos .photo img {
   padding-bottom: 10px;
 }
@@ -5535,6 +5565,100 @@ body#photos .photo a:hover {
 body#photos .photo a:hover strong {
   color: #b30000;
   border-bottom: 1px solid #b30000;
+}
+/*  Page specific: Music
+-------------------------- */
+body#music .release-type {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+body#music .release-type:before,
+body#music .release-type:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+body#music .release-type:after {
+  clear: both;
+}
+body#music .release-type:before,
+body#music .release-type:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+body#music .release-type:after {
+  clear: both;
+}
+body#music .title {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+body#music .release {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  body#music .release {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  body#music .release {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+@media (min-width: 1200px) {
+  body#music .release {
+    float: left;
+    width: 25%;
+  }
+}
+body#music .release h2 {
+  font-size: 1em;
+  padding-bottom: .5em;
+}
+body#music .release h2 .release_date {
+  color: #737373;
+  font-weight: normal;
+}
+body#music .release .sales_links {
+  list-style: none;
+  padding-left: 0;
+}
+body#music .release .sales_links li {
+  float: left;
+}
+body#music .release .sales_links li .label {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  font-size: 0.875em;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 0;
+  background: #333333;
+}
+body#music .release .sales_links li .label:hover {
+  background: #000000;
 }
 .clearfix:before,
 .clearfix:after {

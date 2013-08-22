@@ -2,38 +2,66 @@
 
 {% block title %} &mdash; Music{% endblock title %}
 
+{% block body_id %} id="music"{% endblock body_id %}
+
 {% block content %}
 
     {% if album_list or single_list or vinyl_list %}
         {% if album_list %}
-            <div class="row">
-                <div class="col-12">
+            <div id="albums" class="release-type">
+                <div class="title">
                     <h1>Albums</h1>
                     <hr>
                 </div>
                 {% for album in album_list %}
-                <div class="col-12 col-sm-6 col-lg-4 release album">
-                    {{ album.title }}, {{ album.release_date }},
-                    {% for sales_link in album.sales_link.all %}
-                        <a href="{{ sales_link.url }}" title="{{ sales_link.text }} class="{{ sales_link.type }}">{{ sales_link.text }}</a>
-                    {% endfor %}
+                <div class="release album">
+                    {% if album.artwork_img %}
+                        <img class="img-responsive" src="{{ album.artwork_img.url }}">
+                    {% endif %}
+                    <h2>{{ album.title }} <span class="release_date">({{ album.release_date|date:"Y" }})</span></h2>
+                    {% if album.sales_link.all %}
+                        <ul class="sales_links">
+                        {% for sales_link in album.sales_link.all %}
+                            <li>
+                                <a href="{{ sales_link.url }}" 
+                                   title="{{ sales_link.text }}" 
+                                   class="label label-default {{ sales_link.type }}">
+                                   <span class="glyphicon glyphicon-shopping-cart"></span> {{ sales_link.text }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
         {% endif %}
 
         {% if single_list %}
-        <div class="row">
-            <div class="col-12">
+        <div id="singles" class="release-type">
+            <div class="title">
                 <h1>Singles</h1>
                 <hr>
             </div>
             {% for single in single_list %}
-            <div class="col-12 col-sm-6 col-lg-4 release album">
-                {{ single.title }}, {{ single.release_date }},
-                {% for sales_link in single.sales_link.all %}
-                    <a href="{{ sales_link.url }} title="{{ sales_link.text }} class="{{ sales_link.type }}">{{ sales_link.text }}</a>
-                {% endfor %}
+            <div class="release single">
+                {% if single.single_artwork_img %}
+                    <img class="img-responsive" src="{{ single.single_artwork_img.url }}">
+                {% endif %}
+                <h2>{{ single.title }} <span class="release_date">({{ single.release_date|date:"Y" }})</span></h2>
+                {% if single.sales_link.all %}
+                    <ul class="sales_links">
+                    {% for sales_link in single.sales_link.all %}
+                        <li>
+                            <a href="{{ sales_link.url }}" 
+                               title="{{ sales_link.text }}" 
+                               class="label label-default {{ sales_link.type }}">
+                               <span class="glyphicon glyphicon-shopping-cart"></span> {{ sales_link.text }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
             </div>
             {% endfor %}
 
@@ -41,17 +69,30 @@
         {% endif %}
 
         {% if vinyl_list %}
-        <div class="row">
-            <div class="col-12">
+        <div id="vinyls" class="release-type">
+            <div class="title">
                 <h1>Vinyls</h1>
                 <hr>
             </div>
             {% for vinyl in vinyl_list %}
-            <div class="col-12 col-sm-6 col-lg-4 release album">
-                {{ vinyl.title }}, {{ vinyl.vinyl_release_date }},
-                {% for sales_link in vinyl.sales_link.all %}
-                    <a href="{{ sales_link.url }}" title="{{ sales_link.text }} class="{{ sales_link.type }}">{{ sales_link.text }}</a>
-                {% endfor %}
+            <div class="release vinyl">
+                {% if vinyl.vinyl_artwork_img %}
+                    <img class="img-responsive" src="{{ vinyl.vinyl_artwork_img.url }}">
+                {% endif %}
+                <h2>{{ vinyl.title }} <span class="release_date">({{ vinyl.vinyl_release_date|date:"Y" }})</span></h2>
+                {% if vinyl.sales_link.all %}
+                    <ul class="sales_links">
+                    {% for sales_link in vinyl.sales_link.all %}
+                        <li>
+                            <a href="{{ sales_link.url }}" 
+                               title="{{ sales_link.text }}" 
+                               class="label label-default {{ sales_link.type }}">
+                               <span class="glyphicon glyphicon-shopping-cart"></span> {{ sales_link.text }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
