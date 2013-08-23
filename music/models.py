@@ -30,11 +30,11 @@ class SalesLink(models.Model):
 class Album(models.Model):
     title = models.CharField(max_length=200)
     release_date = models.DateField('date released')
-    artwork_img = models.ImageField(upload_to='temp/folder', help_text='dimensions', blank=True)
+    artwork_img = models.ImageField(upload_to='art/album', help_text='dimensions', blank=True)
 
     is_vinyl = models.BooleanField()
     vinyl_release_date = models.DateField('date released', blank=True, null=True)
-    vinyl_artwork_img = models.ImageField(upload_to='temp/folder', help_text='dimensions', blank=True)
+    vinyl_artwork_img = models.ImageField(upload_to='art/vinyl', help_text='dimensions', blank=True)
 
     sales_link = generic.GenericRelation(SalesLink)
 
@@ -53,7 +53,7 @@ class Song(models.Model):
     lyrics = models.TextField(blank=True)
 
     is_single = models.BooleanField()
-    single_artwork_img = models.ImageField(upload_to='temp/folder', help_text='dimensions', blank=True)
+    single_artwork_img = models.ImageField(upload_to='art/single', help_text='dimensions', blank=True)
 
     album = models.ManyToManyField(Album)
     sales_link = generic.GenericRelation(SalesLink)
