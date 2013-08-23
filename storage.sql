@@ -1,3 +1,4 @@
+PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE "auth_permission" (
     "id" integer NOT NULL PRIMARY KEY,
@@ -165,6 +166,10 @@ INSERT INTO "django_admin_log" VALUES(32,'2013-08-22 20:33:42.829930',1,12,'1','
 INSERT INTO "django_admin_log" VALUES(33,'2013-08-22 20:35:59.432072',1,12,'1','Natsa',2,'Changed text for sales link "sy Asdasd". Changed type and text for sales link "cd asdasdasdasdasd".');
 INSERT INTO "django_admin_log" VALUES(34,'2013-08-22 20:36:17.944986',1,12,'1','Natsa',2,'Changed type and text for sales link "di Asdasd".');
 INSERT INTO "django_admin_log" VALUES(35,'2013-08-22 20:36:42.225395',1,12,'1','Natsa',2,'Changed description for sales link "di Link til itunes". Changed description for sales link "cd Link til platekomp".');
+INSERT INTO "django_admin_log" VALUES(36,'2013-08-23 12:50:56.806250',1,13,'1','Supersangen',2,'Changed is_single and single_artwork_img.');
+INSERT INTO "django_admin_log" VALUES(37,'2013-08-23 12:51:22.684399',1,12,'2','Feskslog',2,'Changed artwork_img.');
+INSERT INTO "django_admin_log" VALUES(38,'2013-08-23 12:51:32.750317',1,12,'2','Feskslog',2,'Changed artwork_img.');
+INSERT INTO "django_admin_log" VALUES(39,'2013-08-23 12:51:50.703221',1,12,'1','Natsa',2,'Changed artwork_img.');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -222,16 +227,16 @@ CREATE TABLE "music_album" (
     "vinyl_release_date" date,
     "vinyl_artwork_img" varchar(100) NOT NULL
 );
-INSERT INTO "music_album" VALUES(1,'Natsa','2013-08-03','',1,'2013-08-22','temp/folder/gondol.jpg');
-INSERT INTO "music_album" VALUES(2,'Feskslog','2013-08-04','temp/folder/stetinden.jpg',1,'2013-08-04','temp/folder/thumb_1.png');
+INSERT INTO "music_album" VALUES(1,'Natsa','2013-08-03','art/album/bilde.JPG',1,'2013-08-22','temp/folder/gondol.jpg');
+INSERT INTO "music_album" VALUES(2,'Feskslog','2013-08-04','art/album/old.png',1,'2013-08-04','temp/folder/thumb_1.png');
 CREATE TABLE "music_song_album" (
     "id" integer NOT NULL PRIMARY KEY,
     "song_id" integer NOT NULL,
     "album_id" integer NOT NULL REFERENCES "music_album" ("id"),
     UNIQUE ("song_id", "album_id")
 );
-INSERT INTO "music_song_album" VALUES(1,1,1);
 INSERT INTO "music_song_album" VALUES(2,2,1);
+INSERT INTO "music_song_album" VALUES(3,1,1);
 CREATE TABLE "music_song" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(200) NOT NULL,
@@ -241,7 +246,7 @@ CREATE TABLE "music_song" (
     "is_single" bool NOT NULL,
     "single_artwork_img" varchar(100) NOT NULL
 );
-INSERT INTO "music_song" VALUES(1,'Supersangen','2013-08-03','Mats','Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. ',0,'');
+INSERT INTO "music_song" VALUES(1,'Supersangen','2013-08-03','Mats','Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. ',1,'art/single/IMG_4608.JPG');
 INSERT INTO "music_song" VALUES(2,'Test','2013-08-04','Peppi','',1,'temp/folder/stetinden_1.jpg');
 CREATE TABLE "videos_video" (
     "id" integer NOT NULL PRIMARY KEY,
