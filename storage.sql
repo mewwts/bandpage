@@ -165,6 +165,11 @@ INSERT INTO "django_admin_log" VALUES(32,'2013-08-22 20:33:42.829930',1,12,'1','
 INSERT INTO "django_admin_log" VALUES(33,'2013-08-22 20:35:59.432072',1,12,'1','Natsa',2,'Changed text for sales link "sy Asdasd". Changed type and text for sales link "cd asdasdasdasdasd".');
 INSERT INTO "django_admin_log" VALUES(34,'2013-08-22 20:36:17.944986',1,12,'1','Natsa',2,'Changed type and text for sales link "di Asdasd".');
 INSERT INTO "django_admin_log" VALUES(35,'2013-08-22 20:36:42.225395',1,12,'1','Natsa',2,'Changed description for sales link "di Link til itunes". Changed description for sales link "cd Link til platekomp".');
+INSERT INTO "django_admin_log" VALUES(36,'2013-08-23 08:03:17.317252',1,12,'2','Bomtur til jorda',2,'Changed title, artwork_img and vinyl_artwork_img.');
+INSERT INTO "django_admin_log" VALUES(37,'2013-08-23 08:04:14.619919',1,12,'2','Bomtur til jorda',2,'Changed release_date and vinyl_release_date.');
+INSERT INTO "django_admin_log" VALUES(38,'2013-08-23 08:04:43.782804',1,12,'1','Alle gode ting',2,'Changed title, artwork_img and vinyl_artwork_img.');
+INSERT INTO "django_admin_log" VALUES(39,'2013-08-23 08:05:14.668647',1,12,'2','Bomtur til jorda',2,'Changed vinyl_artwork_img.');
+INSERT INTO "django_admin_log" VALUES(40,'2013-08-23 08:07:18.320766',1,12,'3','Trådnøsting',1,'');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -222,8 +227,9 @@ CREATE TABLE "music_album" (
     "vinyl_release_date" date,
     "vinyl_artwork_img" varchar(100) NOT NULL
 );
-INSERT INTO "music_album" VALUES(1,'Natsa','2013-08-03','',1,'2013-08-22','temp/folder/gondol.jpg');
-INSERT INTO "music_album" VALUES(2,'Feskslog','2013-08-04','temp/folder/stetinden.jpg',1,'2013-08-04','temp/folder/thumb_1.png');
+INSERT INTO "music_album" VALUES(1,'Alle gode ting','2013-08-03','temp/folder/cd_allegodeting.png',1,'2013-08-22','temp/folder/cd_allegodeting_1.png');
+INSERT INTO "music_album" VALUES(2,'Bomtur til jorda','2012-08-04','temp/folder/cd_bomtur.png',1,'2012-10-04','temp/folder/vinyl_bomtur.png');
+INSERT INTO "music_album" VALUES(3,'Trådnøsting','2009-08-23','temp/folder/cd_tradnosting.png',1,'2010-08-23','temp/folder/vinyl_tradnosting.png');
 CREATE TABLE "music_song_album" (
     "id" integer NOT NULL PRIMARY KEY,
     "song_id" integer NOT NULL,
