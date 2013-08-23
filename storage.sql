@@ -159,6 +159,12 @@ INSERT INTO "django_admin_log" VALUES(26,'2013-08-21 17:21:22.791608',1,10,'1','
 INSERT INTO "django_admin_log" VALUES(27,'2013-08-21 18:33:21.878701',1,10,'5','Krk',3,'');
 INSERT INTO "django_admin_log" VALUES(28,'2013-08-21 18:33:36.765908',1,10,'1','Mongo',1,'');
 INSERT INTO "django_admin_log" VALUES(29,'2013-08-21 18:45:46.246047',1,8,'3','asdasd-2013-08-03 22:29:48+02:00',2,'Changed ticket_url and facebook_url.');
+INSERT INTO "django_admin_log" VALUES(30,'2013-08-22 18:44:40.148454',1,12,'2','Feskslog',2,'Changed artwork_img.');
+INSERT INTO "django_admin_log" VALUES(31,'2013-08-22 19:41:30.523261',1,13,'2','Test',2,'Changed single_artwork_img.');
+INSERT INTO "django_admin_log" VALUES(32,'2013-08-22 20:33:42.829930',1,12,'1','Natsa',2,'Changed is_vinyl, vinyl_release_date and vinyl_artwork_img.');
+INSERT INTO "django_admin_log" VALUES(33,'2013-08-22 20:35:59.432072',1,12,'1','Natsa',2,'Changed text for sales link "sy Asdasd". Changed type and text for sales link "cd asdasdasdasdasd".');
+INSERT INTO "django_admin_log" VALUES(34,'2013-08-22 20:36:17.944986',1,12,'1','Natsa',2,'Changed type and text for sales link "di Asdasd".');
+INSERT INTO "django_admin_log" VALUES(35,'2013-08-22 20:36:42.225395',1,12,'1','Natsa',2,'Changed description for sales link "di Link til itunes". Changed description for sales link "cd Link til platekomp".');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -204,8 +210,8 @@ CREATE TABLE "music_saleslink" (
     "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"),
     "object_id" integer unsigned NOT NULL
 );
-INSERT INTO "music_saleslink" VALUES(1,'sy','Asdsad','Asdasd','http://test.com/',12,1);
-INSERT INTO "music_saleslink" VALUES(2,'di','asdasdasdasd','asdasdasdasdasd','http://vg.no/',12,1);
+INSERT INTO "music_saleslink" VALUES(1,'di','MP3','Link til itunes','http://test.com/',12,1);
+INSERT INTO "music_saleslink" VALUES(2,'cd','CD','Link til platekomp','http://vg.no/',12,1);
 INSERT INTO "music_saleslink" VALUES(3,'cd','Cd','feskslog','http://cd.com/',12,2);
 CREATE TABLE "music_album" (
     "id" integer NOT NULL PRIMARY KEY,
@@ -216,8 +222,8 @@ CREATE TABLE "music_album" (
     "vinyl_release_date" date,
     "vinyl_artwork_img" varchar(100) NOT NULL
 );
-INSERT INTO "music_album" VALUES(1,'Natsa','2013-08-03','',0,NULL,'');
-INSERT INTO "music_album" VALUES(2,'Feskslog','2013-08-04','',1,'2013-08-04','temp/folder/thumb_1.png');
+INSERT INTO "music_album" VALUES(1,'Natsa','2013-08-03','',1,'2013-08-22','temp/folder/gondol.jpg');
+INSERT INTO "music_album" VALUES(2,'Feskslog','2013-08-04','temp/folder/stetinden.jpg',1,'2013-08-04','temp/folder/thumb_1.png');
 CREATE TABLE "music_song_album" (
     "id" integer NOT NULL PRIMARY KEY,
     "song_id" integer NOT NULL,
@@ -236,7 +242,7 @@ CREATE TABLE "music_song" (
     "single_artwork_img" varchar(100) NOT NULL
 );
 INSERT INTO "music_song" VALUES(1,'Supersangen','2013-08-03','Mats','Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. ',0,'');
-INSERT INTO "music_song" VALUES(2,'Test','2013-08-04','Peppi','',1,'temp/folder/thumb_2.png');
+INSERT INTO "music_song" VALUES(2,'Test','2013-08-04','Peppi','',1,'temp/folder/stetinden_1.jpg');
 CREATE TABLE "videos_video" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(400) NOT NULL,
