@@ -5660,6 +5660,72 @@ body#music .release .sales_links li .label {
 body#music .release .sales_links li .label:hover {
   background: #000000;
 }
+/*  Page specific: Lyrics 
+-------------------------- */
+body#lyrics .release {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+body#lyrics .release:before,
+body#lyrics .release:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+body#lyrics .release:after {
+  clear: both;
+}
+body#lyrics .release:before,
+body#lyrics .release:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+body#lyrics .release:after {
+  clear: both;
+}
+body#lyrics .title {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+body#lyrics .songs {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  body#lyrics .songs {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+body#lyrics .lyrics {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  body#lyrics .lyrics {
+    float: left;
+    width: 66.66666666666666%;
+  }
+}
 .clearfix:before,
 .clearfix:after {
   content: " ";

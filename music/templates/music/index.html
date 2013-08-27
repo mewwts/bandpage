@@ -22,6 +22,7 @@
                     {% if album.sales_link.all %}
                         <ul class="sales_links">
                         {% for sales_link in album.sales_link.all %}
+                            {% if sales_link.type != "vi" %}
                             <li>
                                 <a href="{{ sales_link.url }}" 
                                    title="{{ sales_link.text }}" 
@@ -29,6 +30,7 @@
                                    <span class="glyphicon glyphicon-shopping-cart"></span> {{ sales_link.text }}
                                 </a>
                             </li>
+                            {% endif %}
                         {% endfor %}
                         </ul>
                     {% endif %}
@@ -83,6 +85,7 @@
                 {% if vinyl.sales_link.all %}
                     <ul class="sales_links">
                     {% for sales_link in vinyl.sales_link.all %}
+                        {% if sales_link.type == "vi" %}
                         <li>
                             <a href="{{ sales_link.url }}" 
                                title="{{ sales_link.text }}" 
@@ -90,6 +93,7 @@
                                <span class="glyphicon glyphicon-shopping-cart"></span> {{ sales_link.text }}
                             </a>
                         </li>
+                        {% endif %}
                     {% endfor %}
                     </ul>
                 {% endif %}
