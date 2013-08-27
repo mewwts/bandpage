@@ -1,4 +1,6 @@
 from django.db import models
+from django.conf import settings
+from bandpage.functions import validate_sizes
 
 
 class Photo(models.Model):
@@ -12,3 +14,7 @@ class Photo(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    def clean(self):
+        if validate_sizes(self.thumbnail, settings.ARTWORK_SIZES):
+            raise ValidationError('Please upload a thumbnail image with a valid size')

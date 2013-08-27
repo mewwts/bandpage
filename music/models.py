@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
 from django.core.exceptions import ValidationError
+from django.conf import settings
+from bandpage.functions import validate_sizes
 
 
 class SalesLink(models.Model):
@@ -34,7 +36,7 @@ class Album(models.Model):
 
     is_vinyl = models.BooleanField()
     vinyl_release_date = models.DateField('date released', blank=True, null=True)
-    vinyl_artwork_img = models.ImageField(upload_to='art/vinyl', help_text='dimensions', blank=True)
+    vinyl_artwork_img = models.ImageField(upload_to='art/vinyl',help_text='dimensions', blank=True)
 
     sales_link = generic.GenericRelation(SalesLink)
 
@@ -44,6 +46,8 @@ class Album(models.Model):
     def clean(self):
         if self.is_vinyl and not (self.vinyl_artwork_img and self.vinyl_release_date):
             raise ValidationError('Vinyls must have artwork and a release date')
+        if validate_sizes(self.vinyl_artwork_img, settings.ARTWORK_SIZES):
+            raise ValidationError('Please upload a vinyl image with a valid size')
 
 
 class Song(models.Model):
@@ -64,8 +68,8 @@ class Song(models.Model):
     def clean(self):
         if self.is_single and not self.single_artwork_img:
             raise ValidationError('Singles need artwork')
+        if self.is_single and validate_sizes(self.single_artwork_img, settings.ARTWORK_SIZES):
+            raise ValidationError('Please upload an image with a valid size')
 
 ##  TODO
-##  Media root in settings file
-##  upload_to-folders
 ##  Filetype checker
