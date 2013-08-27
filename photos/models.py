@@ -6,7 +6,6 @@ from bandpage.functions import validate_sizes
 class Photo(models.Model):
     title = models.CharField(max_length=400)
     photographer = models.CharField(max_length=200, blank=True, null=True)
-    # Fix upload urls here
     thumbnail = models.ImageField(upload_to='thumbs',
                                   help_text='dimensions')
     image = models.ImageField(upload_to='images',

@@ -170,6 +170,8 @@ INSERT INTO "django_admin_log" VALUES(36,'2013-08-23 12:50:56.806250',1,13,'1','
 INSERT INTO "django_admin_log" VALUES(37,'2013-08-23 12:51:22.684399',1,12,'2','Feskslog',2,'Changed artwork_img.');
 INSERT INTO "django_admin_log" VALUES(38,'2013-08-23 12:51:32.750317',1,12,'2','Feskslog',2,'Changed artwork_img.');
 INSERT INTO "django_admin_log" VALUES(39,'2013-08-23 12:51:50.703221',1,12,'1','Natsa',2,'Changed artwork_img.');
+INSERT INTO "django_admin_log" VALUES(40,'2013-08-27 16:30:18.314794',1,12,'1','Natsa',2,'Changed vinyl_artwork_img.');
+INSERT INTO "django_admin_log" VALUES(41,'2013-08-27 18:17:25.671655',1,12,'2','Feskslog',2,'Changed vinyl_artwork_img.');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -227,8 +229,8 @@ CREATE TABLE "music_album" (
     "vinyl_release_date" date,
     "vinyl_artwork_img" varchar(100) NOT NULL
 );
-INSERT INTO "music_album" VALUES(1,'Natsa','2013-08-03','art/album/bilde.JPG',1,'2013-08-22','temp/folder/gondol.jpg');
-INSERT INTO "music_album" VALUES(2,'Feskslog','2013-08-04','art/album/old.png',1,'2013-08-04','temp/folder/thumb_1.png');
+INSERT INTO "music_album" VALUES(1,'Natsa','2013-08-03','art/album/bilde.JPG',1,'2013-08-22','art/vinyl/DSC03194.jpeg');
+INSERT INTO "music_album" VALUES(2,'Feskslog','2013-08-04','art/album/old.png',1,'2013-08-04','art/vinyl/tor.png');
 CREATE TABLE "music_song_album" (
     "id" integer NOT NULL PRIMARY KEY,
     "song_id" integer NOT NULL,

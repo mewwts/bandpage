@@ -71,5 +71,4 @@ class Song(models.Model):
         if self.is_single and validate_sizes(self.single_artwork_img, settings.ARTWORK_SIZES):
             raise ValidationError('Please upload an image with a valid size')
 
-##  TODO
-##  Filetype checker
+
