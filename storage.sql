@@ -169,13 +169,8 @@ INSERT INTO "django_admin_log" VALUES(36,'2013-08-23 12:50:56.806250',1,13,'1','
 INSERT INTO "django_admin_log" VALUES(37,'2013-08-23 12:51:22.684399',1,12,'2','Feskslog',2,'Changed artwork_img.');
 INSERT INTO "django_admin_log" VALUES(38,'2013-08-23 12:51:32.750317',1,12,'2','Feskslog',2,'Changed artwork_img.');
 INSERT INTO "django_admin_log" VALUES(39,'2013-08-23 12:51:50.703221',1,12,'1','Natsa',2,'Changed artwork_img.');
-INSERT INTO "django_admin_log" VALUES(40,'2013-08-27 16:38:46.554735',1,12,'2','Feskslog',2,'Added sales link "vi platekompaniet".');
-INSERT INTO "django_admin_log" VALUES(41,'2013-08-27 16:42:09.740468',1,13,'1','Supersangen',2,'Added sales link "sy Spoti".');
-INSERT INTO "django_admin_log" VALUES(42,'2013-08-27 17:04:58.475320',1,13,'3','Testlåt 3',1,'');
-INSERT INTO "django_admin_log" VALUES(43,'2013-08-27 17:05:02.931128',1,13,'3','Testlåt 3',2,'No fields changed.');
-INSERT INTO "django_admin_log" VALUES(44,'2013-08-27 17:05:18.703177',1,13,'4','Uten tittel',1,'');
-INSERT INTO "django_admin_log" VALUES(45,'2013-08-27 17:05:58.797638',1,13,'5','Glemte barn som spinna',1,'');
-INSERT INTO "django_admin_log" VALUES(46,'2013-08-27 17:06:32.889180',1,13,'2','Test',2,'Changed lyrics.');
+INSERT INTO "django_admin_log" VALUES(40,'2013-08-27 16:30:18.314794',1,12,'1','Natsa',2,'Changed vinyl_artwork_img.');
+INSERT INTO "django_admin_log" VALUES(41,'2013-08-27 18:17:25.671655',1,12,'2','Feskslog',2,'Changed vinyl_artwork_img.');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -224,8 +219,6 @@ CREATE TABLE "music_saleslink" (
 INSERT INTO "music_saleslink" VALUES(1,'di','MP3','Link til itunes','http://test.com/',12,1);
 INSERT INTO "music_saleslink" VALUES(2,'cd','CD','Link til platekomp','http://vg.no/',12,1);
 INSERT INTO "music_saleslink" VALUES(3,'cd','Cd','feskslog','http://cd.com/',12,2);
-INSERT INTO "music_saleslink" VALUES(4,'vi','Vinyl','platekompaniet','http://db.no/',12,2);
-INSERT INTO "music_saleslink" VALUES(5,'sy','Test','Spoti','http://spotify.com/',13,1);
 CREATE TABLE "music_album" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(200) NOT NULL,
@@ -235,19 +228,16 @@ CREATE TABLE "music_album" (
     "vinyl_release_date" date,
     "vinyl_artwork_img" varchar(100) NOT NULL
 );
-INSERT INTO "music_album" VALUES(1,'Natsa','2013-08-03','art/album/bilde.JPG',1,'2013-08-22','temp/folder/gondol.jpg');
-INSERT INTO "music_album" VALUES(2,'Feskslog','2013-08-04','art/album/old.png',1,'2013-08-04','temp/folder/thumb_1.png');
+INSERT INTO "music_album" VALUES(1,'Natsa','2013-08-03','art/album/bilde.JPG',1,'2013-08-22','art/vinyl/DSC03194.jpeg');
+INSERT INTO "music_album" VALUES(2,'Feskslog','2013-08-04','art/album/old.png',1,'2013-08-04','art/vinyl/tor.png');
 CREATE TABLE "music_song_album" (
     "id" integer NOT NULL PRIMARY KEY,
     "song_id" integer NOT NULL,
     "album_id" integer NOT NULL REFERENCES "music_album" ("id"),
     UNIQUE ("song_id", "album_id")
 );
+INSERT INTO "music_song_album" VALUES(2,2,1);
 INSERT INTO "music_song_album" VALUES(3,1,1);
-INSERT INTO "music_song_album" VALUES(4,3,2);
-INSERT INTO "music_song_album" VALUES(5,4,1);
-INSERT INTO "music_song_album" VALUES(6,5,2);
-INSERT INTO "music_song_album" VALUES(7,2,1);
 CREATE TABLE "music_song" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(200) NOT NULL,
@@ -258,10 +248,7 @@ CREATE TABLE "music_song" (
     "single_artwork_img" varchar(100) NOT NULL
 );
 INSERT INTO "music_song" VALUES(1,'Supersangen','2013-08-03','Mats','Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. ',1,'art/single/IMG_4608.JPG');
-INSERT INTO "music_song" VALUES(2,'Test','2013-08-04','Peppi','Lorem ipsum dolor sit amet',1,'temp/folder/stetinden_1.jpg');
-INSERT INTO "music_song" VALUES(3,'Testlåt 3','2013-08-27','Leon','Lorem ipsum dolor sit amet',0,'');
-INSERT INTO "music_song" VALUES(4,'Uten tittel','2013-08-27','Odrik','…',0,'');
-INSERT INTO "music_song" VALUES(5,'Glemte barn som spinna','2013-08-27','P','Kvær gang æ trur æ glem',0,'');
+INSERT INTO "music_song" VALUES(2,'Test','2013-08-04','Peppi','',1,'temp/folder/stetinden_1.jpg');
 CREATE TABLE "videos_video" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(400) NOT NULL,

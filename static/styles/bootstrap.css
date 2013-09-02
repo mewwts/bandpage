@@ -5537,6 +5537,62 @@ body#concerts table .label:focus {
 }
 /*  Page specific: Photos 
 -------------------------- */
+body#photos .photo_list {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+body#photos .photo_list:before,
+body#photos .photo_list:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+body#photos .photo_list:after {
+  clear: both;
+}
+body#photos .photo_list:before,
+body#photos .photo_list:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+body#photos .photo_list:after {
+  clear: both;
+}
+body#photos .title {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+body#photos .photo {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  body#photos .photo {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  body#photos .photo {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
 body#photos .photo img {
   padding-bottom: 10px;
 }

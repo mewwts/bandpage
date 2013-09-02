@@ -5,14 +5,14 @@
 {% block body_id %} id="photos"{% endblock body_id %}
 
 {% block content %}
-    <div class="row">
+    <div class="photo_list">
         {% if photo_list %}
-            <div class="col-12">
+            <div class="title">
                 <h1>Photos</h1>
                 <hr>
             </div>
             {% for photo in photo_list %}
-            <div class="col-12 col-sm-6 col-lg-4 photo">
+            <div class="photo">
                 <a href="{{ photo.image.url }}" alt="{{ photo.title }}">
                     <!--<img class="img-responsive" src="{{ photo.thumb }}">-->
                     <img class="img-responsive" src="{{ photo.thumbnail.url }}">
@@ -26,7 +26,7 @@
             </div>
             {% endfor %}
         {% else %}
-        <div class="col-12">
+        <div class="title">
             <h1>Eeeh…</h1>
             <p class="lead">There are no photos to display.</p>
         </div>
