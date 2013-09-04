@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from music.models import Album
 from music.models import Song
-from datetime import date
+from django.template import RequestContext
+
 
 
 def index(request):
@@ -12,7 +13,7 @@ def index(request):
     context = {'album_list': album_list,
                'single_list': single_list,
                'vinyl_list': vinyl_list}
-
+#    return render_to_response('music/index.html', context, context_instance=RequestContext(request))
     return render(request, 'music/index.html', context)
 
 
