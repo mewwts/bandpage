@@ -5510,6 +5510,51 @@ footer #contact-info #promo {
 }
 /*  Page specific: Concerts
 -------------------------- */
+body#concerts .concert-lists {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+body#concerts .concert-lists:before,
+body#concerts .concert-lists:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+body#concerts .concert-lists:after {
+  clear: both;
+}
+body#concerts .concert-lists:before,
+body#concerts .concert-lists:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+body#concerts .concert-lists:after {
+  clear: both;
+}
+body#concerts .title,
+body#concerts .concert-list {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+body#concerts table {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 body#concerts table .date {
   width: 15%;
 }
@@ -5537,12 +5582,12 @@ body#concerts table .label:focus {
 }
 /*  Page specific: Photos 
 -------------------------- */
-body#photos .photo_list {
+body#photos .photo-list {
   margin-left: -15px;
   margin-right: -15px;
 }
-body#photos .photo_list:before,
-body#photos .photo_list:after {
+body#photos .photo-list:before,
+body#photos .photo-list:after {
   content: " ";
   /* 1 */
 
@@ -5550,11 +5595,11 @@ body#photos .photo_list:after {
   /* 2 */
 
 }
-body#photos .photo_list:after {
+body#photos .photo-list:after {
   clear: both;
 }
-body#photos .photo_list:before,
-body#photos .photo_list:after {
+body#photos .photo-list:before,
+body#photos .photo-list:after {
   content: " ";
   /* 1 */
 
@@ -5562,7 +5607,7 @@ body#photos .photo_list:after {
   /* 2 */
 
 }
-body#photos .photo_list:after {
+body#photos .photo-list:after {
   clear: both;
 }
 body#photos .title {
