@@ -83,7 +83,7 @@ CREATE TABLE "auth_user" (
     "is_active" bool NOT NULL,
     "date_joined" datetime NOT NULL
 );
-INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-08-21 18:45:23.502216',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
+INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-09-04 18:48:24.461651',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
 CREATE TABLE "django_content_type" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(100) NOT NULL,
@@ -114,6 +114,7 @@ INSERT INTO "django_session" VALUES('5p1o9ytikmao4uhavde27ffjz67qudfo','NDgxYjZj
 INSERT INTO "django_session" VALUES('jcdfaj5m0vjwkgw109c56k5uei4nerxb','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-08-17 20:13:48.427418');
 INSERT INTO "django_session" VALUES('zp6b3jiieqoyugko9cxqgo8s4e9yv24r','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-09-04 17:17:53.520681');
 INSERT INTO "django_session" VALUES('ayf1sphrrrhpfhclg83ykq6r0t1i44n2','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-09-04 18:45:23.526319');
+INSERT INTO "django_session" VALUES('uy6gz07rxbhhi6qoyi2qm7zxejppmmjy','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-09-18 18:48:24.466598');
 CREATE TABLE "django_site" (
     "id" integer NOT NULL PRIMARY KEY,
     "domain" varchar(100) NOT NULL,
@@ -171,6 +172,15 @@ INSERT INTO "django_admin_log" VALUES(38,'2013-08-23 12:51:32.750317',1,12,'2','
 INSERT INTO "django_admin_log" VALUES(39,'2013-08-23 12:51:50.703221',1,12,'1','Natsa',2,'Changed artwork_img.');
 INSERT INTO "django_admin_log" VALUES(40,'2013-08-27 16:30:18.314794',1,12,'1','Natsa',2,'Changed vinyl_artwork_img.');
 INSERT INTO "django_admin_log" VALUES(41,'2013-08-27 18:17:25.671655',1,12,'2','Feskslog',2,'Changed vinyl_artwork_img.');
+INSERT INTO "django_admin_log" VALUES(42,'2013-09-04 18:22:31.930609',1,9,'1','Lorem ipsum dolor sit ametdark',1,'');
+INSERT INTO "django_admin_log" VALUES(43,'2013-09-04 18:42:12.022841',1,9,'1','Lorem ipsum dolor sit ametdark',2,'Changed link_text.');
+INSERT INTO "django_admin_log" VALUES(44,'2013-09-04 18:43:51.838064',1,9,'1','alle gode tingdark',2,'Changed title and text.');
+INSERT INTO "django_admin_log" VALUES(45,'2013-09-04 18:44:10.080793',1,9,'1','alle gode tingdark',2,'Changed link_text.');
+INSERT INTO "django_admin_log" VALUES(46,'2013-09-04 18:48:28.696309',1,9,'1','alle gode tinglite',2,'Changed theme.');
+INSERT INTO "django_admin_log" VALUES(47,'2013-09-04 19:05:36.040310',1,9,'1','alle gode tinglite',2,'Changed cover_image.');
+INSERT INTO "django_admin_log" VALUES(48,'2013-09-04 19:09:19.256681',1,9,'1','alle gode tinglite',2,'Changed cover_image.');
+INSERT INTO "django_admin_log" VALUES(49,'2013-09-04 19:10:33.954402',1,9,'1','alle gode tinglite',2,'Changed cover_image.');
+INSERT INTO "django_admin_log" VALUES(50,'2013-09-04 19:15:42.821722',1,9,'1','alle gode tinglite',2,'No fields changed.');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -199,6 +209,7 @@ CREATE TABLE "landingpage_landingpage" (
     "theme" varchar(4) NOT NULL,
     "homepage" bool NOT NULL
 );
+INSERT INTO "landingpage_landingpage" VALUES(1,'','alle gode ting','To år etter forrige utgivelse er Kråkesølv klare med sitt tredje album. Alle gode ting inneholder tolv låter, inkludert singlene «Stødig som en bauta» og «Sjalusien som driv dæ».','http://feskslog.feskslog.com/','Kjøp album','temp/folder/masthead01_inverse_1.png','lite',1);
 CREATE TABLE "photos_photo" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(400) NOT NULL,

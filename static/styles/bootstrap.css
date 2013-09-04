@@ -5518,12 +5518,20 @@ body#landingpage {
 body#landingpage section.content {
   background: none;
 }
+body#landingpage .poster {
+  text-align: center;
+}
 body#landingpage h1 {
   font-size: 5em;
   font-weight: bold;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 body#landingpage p {
   font-size: 1.5em;
+  padding-bottom: 1em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 body#landingpage p.lead {
   font-size: 1.75em;
