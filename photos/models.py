@@ -1,7 +1,7 @@
 from django.db import models
 from django.conf import settings
 from bandpage.functions import validate_sizes
-
+from django.core.exceptions import ValidationError
 
 class Photo(models.Model):
     title = models.CharField(max_length=400)
