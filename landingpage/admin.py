@@ -5,7 +5,7 @@ from landingpage.models import Landingpage
 class LandingAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {'fields': ['cover_image']}),
-        ('Content', {'fields': ['title', 'link_url', 'text']}),
+        ('Content', {'fields': ['title', 'text', 'link_text', 'link_url']}),
         ('Theme', {'fields': ['theme']}),
     ]
     list_display = ('title', 'homepage')

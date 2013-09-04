@@ -14,11 +14,11 @@
             </div>
 
         {% if concerts %} 
-            <div class="concert-list">
+            <div class="concert-list table-responsive">
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th class="date"><h5><span class="glyphicon glyphicon-search"></span></h5></th>
+                            <th class="date"><h5><span class="glyphicon glyphicon-calendar"></span></h5></th>
                             <th class="city"><h5><span class="glyphicon glyphicon-map-marker"></span> City</h5></th>
                             <th class="venue"><h5><span class="glyphicon glyphicon-home"></i> Venue</h5></th>
                             <th class="facebook"></th>
@@ -33,12 +33,12 @@
                         <td>{{ concert.venue }}</td>
                         <td>
                             {% if concert.facebook_url %}
-                            <a href="{{ concert.facebook_url }}"><span class="label">Facebook</span></a>
+                            <a href="{{ concert.facebook_url }}"><span class="label label-default">Facebook</span></a>
                             {% endif %}
                         </td>
                         <td>
                             {% if concert.ticket_url %}
-                            <a href="{{ concert.ticket_url }}"><span class="label label-inverse">Kjøp billett</span></a>
+                            <a href="{{ concert.ticket_url }}"><span class="label label-default"><span class="glyphicon glyphicon-shopping-cart"></span> Kjøp billett</span></a>
                             {% endif %}
                         </td>
                     </tr>
