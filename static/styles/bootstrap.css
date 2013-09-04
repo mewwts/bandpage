@@ -5508,6 +5508,45 @@ footer #contact-info #promo {
   padding-left: 15px;
   padding-right: 15px;
 }
+/*  Page specific: Landingpage
+-------------------------- */
+body#landingpage {
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body#landingpage section.content {
+  background: none;
+}
+body#landingpage h1 {
+  font-size: 5em;
+  font-weight: bold;
+}
+body#landingpage p {
+  font-size: 1.5em;
+}
+body#landingpage p.lead {
+  font-size: 1.75em;
+}
+body#landingpage p a.btn-lg {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+body#landingpage .cover-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  -moz-opacity: 0.4;
+  -khtml-opacity: 0.4;
+  -webkit-opacity: 0.4;
+  opacity: 0.4;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+  filter: alpha(opacity=40);
+}
 /*  Page specific: Concerts
 -------------------------- */
 body#concerts .concert-lists {
@@ -5547,13 +5586,8 @@ body#concerts .concert-list {
   padding-left: 15px;
   padding-right: 15px;
 }
-body#concerts table {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+body#concerts .table-responsive {
+  border: none !important;
 }
 body#concerts table .date {
   width: 15%;
