@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from music.models import Album
 from music.models import Song
-from datetime import date
-
 
 def index(request):
     album_list = Album.objects.all()
