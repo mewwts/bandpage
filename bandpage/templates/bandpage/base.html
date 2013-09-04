@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Kråkesølv{% block title %}{% endblock title %}</title>
+    <title>{{ band_name }}{% block title %}{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -32,7 +32,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">Bandpage</a>
+                    <a class="navbar-brand" href="/">{{ band_name }}</a>
                 </div>
 
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -42,8 +42,8 @@
                         <li><a href="{% url 'photos:index' %}">Photos</a></li>
                         <li><a href="{% url 'videos:index' %}">Videos</a></li>
                         <li><a href="{% url 'music:lyrics' %}">Lyrics</a></li>
-                        <li><a href="http://twitter.com/krkslv">Twitter</a></li>
-                        <li><a href="http://facebook.com/krakesolv">Facebook</a></li>
+                        <li><a href="{{ twitter_url }}">Twitter</a></li>
+                        <li><a href="{{ facebook_url }}">Facebook</a></li>
                     </ul>
                 </div>
             </nav>
@@ -65,17 +65,17 @@
             <div id="contact-info">
                 <div id="booking">
                     <h3>Booking:</h3>
-                    <p>Knut Sannes<br>
-                       977 21 363<br>
-                       <a href="mailto:knut@atomicsoul.no">knut@atomicsoul.no</a>
+                    <p>{{ booking_name }}<br>
+                       {{ booking_phone}}<br>
+                       <a href="mailto:{{ booking_mail }}">{{ booking_mail }}</a>
                     </p>
                 </div>
 
                 <div id="promo">
                     <h3>Presse/promo:</h3>
-                    <p>Erle Strøm<br>
-                       990 04 303<br>
-                       <a href="mailto:erle@hes.no">erle@hes.no</a>
+                    <p>{{ pr_name}}<br>
+                       {{ pr_phone}}<br>
+                       <a href="mailto:{{ pr_mail }}">{{ pr_mail }}</a>
                     </p>
                 </div>
             </div>
