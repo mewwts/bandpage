@@ -10,8 +10,8 @@
     {% if landingpage %}
     <div class="poster">
         <h1>{{ landingpage.title }}</h1>
-        {% if landingpage.text %}<p class="lead">{{ landingpage.text|markdown:”safe” }}</p>{% endif %}
-        {% if landingpage.link_url %}<p><a href="{{ landingpage.link_url }}" class="btn btn-default btn-lg">{{ landingpage.link_text|markdown:”safe” }}</a></p>{% endif %}
+        {% if landingpage.text %}<p class="lead">{{ landingpage.text }}</p>{% endif %}
+        {% if landingpage.link_url %}<p><a href="{{ landingpage.link_url }}" class="btn btn-default btn-lg">{{ landingpage.link_text }}</a></p>{% endif %}
     </div>
     {% else %}
         <p>Det er ingen ting her</p>
