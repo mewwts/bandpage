@@ -5555,6 +5555,9 @@ body#landingpage .cover-image {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
   filter: alpha(opacity=40);
 }
+body#landingpage.dark {
+  background-color: #000;
+}
 /*  Page specific: Concerts
 -------------------------- */
 body#concerts .concert-lists {
