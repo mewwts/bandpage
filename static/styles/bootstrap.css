@@ -5521,17 +5521,19 @@ body#landingpage section.content {
 body#landingpage .poster {
   text-align: center;
 }
+body#landingpage h1,
+body#landingpage p {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
 body#landingpage h1 {
   font-size: 5em;
   font-weight: bold;
   padding-top: .25em;
   padding-bottom: .25em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 body#landingpage p {
   font-size: 1.5em;
   padding-bottom: 1em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 body#landingpage p.lead {
   font-size: 1.75em;
@@ -5556,7 +5558,18 @@ body#landingpage .cover-image {
   filter: alpha(opacity=40);
 }
 body#landingpage.dark {
-  background-color: #000;
+  background-color: #222;
+}
+body#landingpage.dark h1,
+body#landingpage.dark p {
+  color: #e8e8e8;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+body#landingpage.dark header {
+  background: #111;
+}
+body#landingpage.dark header .navbar-inverse {
+  background-color: #111;
 }
 /*  Page specific: Concerts
 -------------------------- */
