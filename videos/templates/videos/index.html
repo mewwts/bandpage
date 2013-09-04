@@ -8,7 +8,7 @@
     {% if video_list %}
         <ul>
         {% for video in video_list %}
-            <li>{{ video.title }}, text: {{ video.text }}
+            <li>{{ video.title }}, text: {{ video.text|markdown:"safe" }}
             <div class="flex-video">
             {% if video.type == "you" %}
                 <iframe width="560" height="315" src="//www.youtube.com/embed/{{ video.video_id}}" frameborder="0" allowfullscreen></iframe>
