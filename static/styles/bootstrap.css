@@ -5535,12 +5535,17 @@ body#landingpage p {
   font-size: 1.5em;
   padding-bottom: 1em;
 }
-body#landingpage p.lead {
-  font-size: 1.75em;
-}
 body#landingpage p a.btn-lg {
   font-size: 1.5em;
   font-weight: bold;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+body#landingpage h1 + p {
+  font-size: 1.75em;
+  padding-bottom: 20px;
 }
 body#landingpage .cover-image {
   position: absolute;
@@ -5573,6 +5578,17 @@ body#landingpage.dark header {
 }
 body#landingpage.dark header .navbar-inverse {
   background-color: #111;
+}
+body#landingpage.dark p a.btn-lg {
+  background: #2f2f2f;
+  border-color: #222;
+  color: #f2f2f2;
+}
+body#landingpage.dark p a.btn-lg:hover,
+body#landingpage.dark p a.btn-lg:active {
+  background: #1d1d1d;
+  border-color: #181818;
+  color: white;
 }
 /*  Page specific: Concerts
 -------------------------- */
