@@ -279,12 +279,12 @@ textarea {
   background-image: none;
 }
 a {
-  color: #ff0000;
+  color: #008c95;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #b30000;
+  color: #004449;
   text-decoration: underline;
 }
 a:focus {
@@ -311,10 +311,10 @@ img {
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-transition: all all 0.2s ease-in-out ease-out;
-  -moz-transition: all all 0.2s ease-in-out ease-out;
-  -o-transition: all all 0.2s ease-in-out ease-out;
-  transition: all all 0.2s ease-in-out ease-out;
+  -webkit-transition: all 0.2s ease-in-out 0.2s ease-out;
+  -moz-transition: all 0.2s ease-in-out 0.2s ease-out;
+  -o-transition: all 0.2s ease-in-out 0.2s ease-out;
+  transition: all 0.2s ease-in-out 0.2s ease-out;
   display: inline-block;
   max-width: 100%;
   height: auto;
@@ -1572,10 +1572,10 @@ input[type="number"]::-webkit-inner-spin-button {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  -webkit-transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
-  -moz-transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
-  -o-transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
-  transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 0.2s ease-out;
+  -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 0.2s ease-out;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 0.2s ease-out;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 0.2s ease-out;
 }
 .form-control:focus {
   border-color: #66afe9;
@@ -2082,7 +2082,7 @@ fieldset[disabled] .btn-info.active {
   border-color: #46b8da;
 }
 .btn-link {
-  color: #ff0000;
+  color: #008c95;
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
@@ -2103,7 +2103,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #b30000;
+  color: #004449;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -2148,10 +2148,10 @@ input[type="button"].btn-block {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
-  -webkit-transition: all opacity 0.15s linear ease-out;
-  -moz-transition: all opacity 0.15s linear ease-out;
-  -o-transition: all opacity 0.15s linear ease-out;
-  transition: all opacity 0.15s linear ease-out;
+  -webkit-transition: opacity 0.15s linear 0.2s ease-out;
+  -moz-transition: opacity 0.15s linear 0.2s ease-out;
+  -o-transition: opacity 0.15s linear 0.2s ease-out;
+  transition: opacity 0.15s linear 0.2s ease-out;
 }
 .fade.in {
   opacity: 1;
@@ -2168,10 +2168,10 @@ input[type="button"].btn-block {
   overflow: hidden;
   -webkit-transition: height 0.35s ease;
   transition: height 0.35s ease;
-  -webkit-transition: all height 0.35s ease ease-out;
-  -moz-transition: all height 0.35s ease ease-out;
-  -o-transition: all height 0.35s ease ease-out;
-  transition: all height 0.35s ease ease-out;
+  -webkit-transition: height 0.35s ease 0.2s ease-out;
+  -moz-transition: height 0.35s ease 0.2s ease-out;
+  -o-transition: height 0.35s ease 0.2s ease-out;
+  transition: height 0.35s ease 0.2s ease-out;
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -3342,7 +3342,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #ff0000;
+  border-color: #008c95;
 }
 .nav .nav-divider {
   height: 1px;
@@ -3481,12 +3481,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
   display: block;
 }
 .nav .caret {
-  border-top-color: #ff0000;
-  border-bottom-color: #ff0000;
+  border-top-color: #008c95;
+  border-bottom-color: #008c95;
 }
 .nav a:hover .caret {
-  border-top-color: #b30000;
-  border-bottom-color: #b30000;
+  border-top-color: #004449;
+  border-bottom-color: #004449;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -4288,7 +4288,7 @@ a.badge:focus {
 }
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #ff0000;
+  color: #008c95;
   background-color: #ffffff;
 }
 .nav-pills > li > a > .badge {
@@ -4334,10 +4334,10 @@ a.list-group-item.active > .badge,
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-transition: all all 0.2s ease-in-out ease-out;
-  -moz-transition: all all 0.2s ease-in-out ease-out;
-  -o-transition: all all 0.2s ease-in-out ease-out;
-  transition: all all 0.2s ease-in-out ease-out;
+  -webkit-transition: all 0.2s ease-in-out 0.2s ease-out;
+  -moz-transition: all 0.2s ease-in-out 0.2s ease-out;
+  -o-transition: all 0.2s ease-in-out 0.2s ease-out;
+  transition: all 0.2s ease-in-out 0.2s ease-out;
   display: inline-block;
   max-width: 100%;
   height: auto;
@@ -4350,7 +4350,7 @@ a.list-group-item.active > .badge,
 }
 a.thumbnail:hover,
 a.thumbnail:focus {
-  border-color: #ff0000;
+  border-color: #008c95;
 }
 .thumbnail > img {
   margin-left: auto;
@@ -4486,10 +4486,10 @@ a.thumbnail:focus {
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
-  -webkit-transition: all width 0.6s ease ease-out;
-  -moz-transition: all width 0.6s ease ease-out;
-  -o-transition: all width 0.6s ease ease-out;
-  transition: all width 0.6s ease ease-out;
+  -webkit-transition: width 0.6s ease 0.2s ease-out;
+  -moz-transition: width 0.6s ease 0.2s ease-out;
+  -o-transition: width 0.6s ease 0.2s ease-out;
+  transition: width 0.6s ease 0.2s ease-out;
 }
 .progress-striped .progress-bar {
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
@@ -5253,10 +5253,10 @@ body.modal-open,
   position: relative;
   -webkit-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
-  -webkit-transition: all 0.6s ease-in-out left ease-out;
-  -moz-transition: all 0.6s ease-in-out left ease-out;
-  -o-transition: all 0.6s ease-in-out left ease-out;
-  transition: all 0.6s ease-in-out left ease-out;
+  -webkit-transition: 0.6s ease-in-out left 0.2s ease-out;
+  -moz-transition: 0.6s ease-in-out left 0.2s ease-out;
+  -o-transition: 0.6s ease-in-out left 0.2s ease-out;
+  transition: 0.6s ease-in-out left 0.2s ease-out;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -5434,11 +5434,11 @@ body {
 }
 a {
   text-decoration: none;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 1px solid #008c95;
 }
 a:hover {
   text-decoration: none;
-  border-color: #990000;
+  border-color: #002c2f;
 }
 @media (min-width: 992px) {
   body {
@@ -5655,7 +5655,7 @@ body#concerts table .label {
 }
 body#concerts table .label:hover,
 body#concerts table .label:focus {
-  background: #990000;
+  background: #002c2f;
 }
 /*  Page specific: Photos 
 -------------------------- */
@@ -5741,8 +5741,8 @@ body#photos .photo a:hover {
   filter: alpha(opacity=100);
 }
 body#photos .photo a:hover strong {
-  color: #b30000;
-  border-bottom: 1px solid #b30000;
+  color: #004449;
+  border-bottom: 1px solid #004449;
 }
 /*  Page specific: Music
 -------------------------- */
@@ -5890,6 +5890,25 @@ body#lyrics .songs {
     width: 33.33333333333333%;
   }
 }
+body#lyrics .songs ul.nav {
+  border-bottom: 0;
+}
+body#lyrics .songs ul.nav li a {
+  padding: 0;
+  border: 0;
+  -webkit-transition: color;
+  transition: color;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+body#lyrics .songs ul.nav li a:hover {
+  background: none;
+}
+body#lyrics .songs ul.nav li.active a {
+  color: #002c2f;
+}
 body#lyrics .lyrics {
   float: left;
   width: 100%;
@@ -5903,6 +5922,15 @@ body#lyrics .lyrics {
     float: left;
     width: 66.66666666666666%;
   }
+}
+body#lyrics .lyrics h2 {
+  font-size: 1em;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.375em;
+}
+body#lyrics .lyrics p.composer {
+  font-style: italic;
 }
 .clearfix:before,
 .clearfix:after {
