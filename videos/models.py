@@ -7,9 +7,15 @@ class Video(models.Model):
         ('vim', 'Vimeo'),
         ('you', 'Youtube'),
     )
-
+    CATEGORY_CHOICES = (
+        ('mv', 'Musikkvideo'),
+        ('tv', 'TV'),
+        ('cv', 'Coverlaater'),
+        ('dv', 'Diverse'),
+        )
     title = models.CharField(max_length=400)
     type = models.CharField(choices=PROVIDER_CHOICES, max_length=3)
+    category = models.CharField(choices=CATEGORY_CHOICES, max_length=2)
     text = models.TextField(blank=True, null=True)
     date_published = models.DateField('Date published')
     song = models.ForeignKey(Song, blank=True, null=True)
