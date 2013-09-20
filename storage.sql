@@ -313,12 +313,14 @@ CREATE TABLE "videos_video" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(400) NOT NULL,
     "type" varchar(3) NOT NULL,
+    "category" varchar(2) NOT NULL,
     "text" text,
     "date_published" date NOT NULL,
     "song_id" integer REFERENCES "music_song" ("id"),
     "video_id" varchar(60) NOT NULL
-);
-INSERT INTO "videos_video" VALUES(1,'Sapp','you','# SUPER HEADLINE 
+)
+;
+INSERT INTO "videos_video" VALUES(1,'Sapp','you','mv','# SUPER HEADLINE 
 
 
 ### Ikke supert','2013-09-05',1,'RsS4uCRrN_Y');
