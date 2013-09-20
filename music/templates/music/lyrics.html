@@ -19,9 +19,9 @@
 
         <!-- list -->
         <div class="songs">
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs nav-stacked">
             {% for song in songs %}
-                <li><a href="#song{{ song.id }}"{% if forloop.first %} class="active"{% endif %}>{{ song.title }}</a></li>
+                <li><a href="#song{{ song.id }}"{% if forloop.first %} class="active"{% endif %} data-toggle="tab">{{ song.title }}</a></li>
             {% endfor %}
             </ul>
         </div>
@@ -30,14 +30,14 @@
         <div class="lyrics">
             <div class="tab-content">
             {% for song in songs %}
-                <div id="song{{ song.id}}" class="tab-pane{% if forloop.first %} active{% endif %}">{{ song.lyrics }}</div>
+                <div id="song{{song.id}}" class="tab-pane{% if forloop.first %} active{% endif %}">{{ song.lyrics }}</div>
             {% endfor %}
             </div>
         </div>
     </div>
     {% endfor %}
 {% else %}
-    <p>You have yet to add some lyrics.</p>
+    <p>Lyrics. What lyrics?</p>
 {% endif %}
 
 {%endblock content%}

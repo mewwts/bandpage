@@ -84,7 +84,7 @@ CREATE TABLE "auth_user" (
     "is_active" bool NOT NULL,
     "date_joined" datetime NOT NULL
 );
-INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-09-04 22:43:29.639302',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
+INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-09-20 15:14:40.805341',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
 CREATE TABLE "django_content_type" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(100) NOT NULL,
@@ -117,6 +117,7 @@ INSERT INTO "django_session" VALUES('zp6b3jiieqoyugko9cxqgo8s4e9yv24r','NDgxYjZj
 INSERT INTO "django_session" VALUES('ayf1sphrrrhpfhclg83ykq6r0t1i44n2','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-09-04 18:45:23.526319');
 INSERT INTO "django_session" VALUES('uy6gz07rxbhhi6qoyi2qm7zxejppmmjy','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-09-18 18:48:24.466598');
 INSERT INTO "django_session" VALUES('5ikbew3vzs9tvrpmckazqhd1po7l9u7m','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-09-18 22:43:29.641883');
+INSERT INTO "django_session" VALUES('j9l3b4v2dg1eo3v4yzmoyt8imu01tz8e','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-10-04 15:14:40.807423');
 CREATE TABLE "django_site" (
     "id" integer NOT NULL PRIMARY KEY,
     "domain" varchar(100) NOT NULL,
@@ -188,6 +189,8 @@ INSERT INTO "django_admin_log" VALUES(52,'2013-09-04 21:20:40.667144',1,9,'2','a
 INSERT INTO "django_admin_log" VALUES(53,'2013-09-04 22:44:04.909500',1,14,'1','Sapp',1,'');
 INSERT INTO "django_admin_log" VALUES(54,'2013-09-04 22:47:59.149341',1,9,'2','alle gode ting 2dark',2,'Changed text.');
 INSERT INTO "django_admin_log" VALUES(55,'2013-09-04 22:48:13.072337',1,9,'2','alle gode ting 2dark',2,'Changed text.');
+INSERT INTO "django_admin_log" VALUES(56,'2013-09-04 22:56:20.859828',1,9,'2','alle gode ting 2dark',2,'Changed cover_image.');
+INSERT INTO "django_admin_log" VALUES(57,'2013-09-20 15:15:44.834262',1,13,'2','Test',2,'Changed lyrics and single_artwork_img.');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -217,7 +220,7 @@ CREATE TABLE "landingpage_landingpage" (
     "homepage" bool NOT NULL
 );
 INSERT INTO "landingpage_landingpage" VALUES(1,'','alle gode ting','To år etter forrige utgivelse er Kråkesølv klare med sitt tredje album. Alle gode ting inneholder tolv låter, inkludert singlene «Stødig som en bauta» og «Sjalusien som driv dæ».','http://feskslog.feskslog.com/','Kjøp album','temp/folder/masthead01_inverse_1.png','lite',0);
-INSERT INTO "landingpage_landingpage" VALUES(2,'','alle gode ting 2','To år etter forrige utgivelse er Kråkesølv klare med sitt tredje album. Alle gode ting inneholder tolv låter, inkludert singlene «Stødig som en bauta» og «Sjalusien som driv dæ».','http://lorem.ipsum.dolor.sit/','Kjøp album','temp/folder/masthead01_1.png','dark',1);
+INSERT INTO "landingpage_landingpage" VALUES(2,'','alle gode ting 2','To år etter forrige utgivelse er Kråkesølv klare med sitt tredje album. Alle gode ting inneholder tolv låter, inkludert singlene «Stødig som en bauta» og «Sjalusien som driv dæ».','http://lorem.ipsum.dolor.sit/','Kjøp album','landingpages/IMG_4608.JPG','dark',1);
 CREATE TABLE "photos_photo" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(400) NOT NULL,
@@ -255,8 +258,8 @@ CREATE TABLE "music_song_album" (
     "album_id" integer NOT NULL REFERENCES "music_album" ("id"),
     UNIQUE ("song_id", "album_id")
 );
-INSERT INTO "music_song_album" VALUES(2,2,1);
 INSERT INTO "music_song_album" VALUES(3,1,1);
+INSERT INTO "music_song_album" VALUES(4,2,1);
 CREATE TABLE "music_song" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(200) NOT NULL,
@@ -267,7 +270,7 @@ CREATE TABLE "music_song" (
     "single_artwork_img" varchar(100) NOT NULL
 );
 INSERT INTO "music_song" VALUES(1,'Supersangen','2013-08-03','Mats','Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. ',1,'art/single/IMG_4608.JPG');
-INSERT INTO "music_song" VALUES(2,'Test','2013-08-04','Peppi','',1,'temp/folder/stetinden_1.jpg');
+INSERT INTO "music_song" VALUES(2,'Test','2013-08-04','Peppi','masgtasasd',1,'art/single/hele.jpg');
 CREATE TABLE "videos_video" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(400) NOT NULL,
