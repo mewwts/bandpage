@@ -198,6 +198,11 @@ INSERT INTO "django_admin_log" VALUES(62,'2013-09-20 14:57:08.476233',1,9,'2','a
 INSERT INTO "django_admin_log" VALUES(63,'2013-09-20 14:58:18.518705',1,9,'2','alle gode ting 2lite',2,'Changed cover_image.');
 INSERT INTO "django_admin_log" VALUES(64,'2013-09-20 15:00:54.882092',1,9,'2','alle gode ting 2lite',2,'Changed cover_image.');
 INSERT INTO "django_admin_log" VALUES(65,'2013-09-20 15:01:03.551534',1,9,'2','alle gode ting 2dark',2,'Changed theme.');
+INSERT INTO "django_admin_log" VALUES(66,'2013-09-20 15:47:33.098251',1,13,'2','Test',2,'Changed lyrics and is_single.');
+INSERT INTO "django_admin_log" VALUES(67,'2013-09-20 15:47:39.029117',1,13,'2','Test',2,'Changed single_artwork_img.');
+INSERT INTO "django_admin_log" VALUES(68,'2013-09-20 15:49:50.163643',1,13,'2','Test',2,'No fields changed.');
+INSERT INTO "django_admin_log" VALUES(69,'2013-09-20 16:11:10.096739',1,13,'2','Stødig som en bauta',2,'Changed title and lyrics.');
+INSERT INTO "django_admin_log" VALUES(70,'2013-09-20 16:13:16.873442',1,13,'2','Stødig som en bauta',2,'Changed lyrics.');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -267,8 +272,8 @@ CREATE TABLE "music_song_album" (
     "album_id" integer NOT NULL REFERENCES "music_album" ("id"),
     UNIQUE ("song_id", "album_id")
 );
-INSERT INTO "music_song_album" VALUES(2,2,1);
 INSERT INTO "music_song_album" VALUES(3,1,1);
+INSERT INTO "music_song_album" VALUES(4,2,1);
 CREATE TABLE "music_song" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(200) NOT NULL,
@@ -279,7 +284,31 @@ CREATE TABLE "music_song" (
     "single_artwork_img" varchar(100) NOT NULL
 );
 INSERT INTO "music_song" VALUES(1,'Supersangen','2013-08-03','Mats','Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. Mats er kul. Mats er fin. ',1,'art/single/IMG_4608.JPG');
-INSERT INTO "music_song" VALUES(2,'Test','2013-08-04','Peppi','',1,'temp/folder/stetinden_1.jpg');
+INSERT INTO "music_song" VALUES(2,'Stødig som en bauta','2013-08-04','Peppi','æ trur at æ hold maska men æ har barneansikt  
+du les mæ helt perfekt men æ lar dæ få tvil  
+snor mæ unna nekta straffskyld så du føl dæ paranoid  
+men æ lura liksom også mæ sjøl så æ har alibi  
+æ har ikke én grunn til det men æ tar dæ for gitt  
+feigheta mi sir mæ at alt klarna på sikt
+
+om æ hold mæ stødig som en bauta  
+kald og passiv  
+så kald og passiv  
+men stødig som en bauta  
+kald og passiv  
+men så standhaftig  
+
+kanskje æ må innse at min tørst og jag etter vin  
+avslør et plaga sinn som trekkes mot jag etter vind  
+eller det kan vær et godt tegn i en verden som e lagd av plastikk  
+kem vet men feigheta mi sir mæ at alt klarna på sikt
+
+om æ hold mæ stødig som en bauta  
+kald og passiv  
+så kald og passiv  
+men stødig som en bauta  
+kald og passiv  
+men så standhaftig',0,'');
 CREATE TABLE "videos_video" (
     "id" integer NOT NULL PRIMARY KEY,
     "title" varchar(400) NOT NULL,
