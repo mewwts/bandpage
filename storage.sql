@@ -1,3 +1,4 @@
+PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE "auth_permission" (
     "id" integer NOT NULL PRIMARY KEY,
@@ -118,6 +119,7 @@ INSERT INTO "django_session" VALUES('uy6gz07rxbhhi6qoyi2qm7zxejppmmjy','NDgxYjZj
 INSERT INTO "django_session" VALUES('5ikbew3vzs9tvrpmckazqhd1po7l9u7m','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-09-18 22:43:29.641883');
 INSERT INTO "django_session" VALUES('xz7ot07adyh3tkia48zs8yxv9139e2q9','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-10-04 14:44:11.425481');
 INSERT INTO "django_session" VALUES('irre12mdwk9xwj7be5cpwzdw9shrjts7','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-10-04 19:38:30.708021');
+INSERT INTO "django_session" VALUES('kyjs2oap285aud197ktb3z61ns175o47','NjVhYzJiYzMwMjEwN2NjYzc5NzYwZDVjNjBhOTVhYjU5M2Q2NzllMzqAAn1xAS4=','2013-10-05 10:13:56.614915');
 CREATE TABLE "django_site" (
     "id" integer NOT NULL PRIMARY KEY,
     "domain" varchar(100) NOT NULL,

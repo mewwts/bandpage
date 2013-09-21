@@ -16,8 +16,8 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(_(r'^admin/'), include(admin.site.urls)),
-    url(_(r'^'), include('landingpage.urls', namespace='frontpage')),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^', include('landingpage.urls', namespace='frontpage')),
     url(_(r'^concerts/'), include('concerts.urls', namespace='concerts')),
     url(_(r'^music/'), include('music.urls', namespace='music')),
     url(_(r'^photos/'), include('photos.urls', namespace='photos')),
