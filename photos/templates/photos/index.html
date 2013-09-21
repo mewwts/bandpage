@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% load i18n %}
 {% block title %} &mdash; Photos{% endblock title %}
 
 {% block body_id %} id="photos"{% endblock body_id %}
@@ -8,7 +9,7 @@
     <div class="photo-list">
         {% if photo_list %}
             <div class="title">
-                <h1>Photos</h1>
+                <h1>{% trans Photos $}</h1>
                 <hr>
             </div>
             {% for photo in photo_list %}
