@@ -13,7 +13,6 @@ def index(request):
 
     return render(request, 'music/index.html', context)
 
-
 def lyrics(request):
     lyrics = dict((album, [song for song in Song.objects.all() if album in song.album.all()]) for album in Album.objects.all())
     context = {'lyrics': lyrics}

@@ -8,10 +8,10 @@ class Video(models.Model):
         ('you', 'Youtube'),
     )
     CATEGORY_CHOICES = (
-        ('mv', 'Musikkvideo'),
+        ('mv', 'Music video'),
         ('tv', 'TV'),
-        ('cv', 'Coverlaater'),
-        ('dv', 'Diverse'),
+        ('cv', 'Cover songs'),
+        ('dv', 'Other'),
         )
     title = models.CharField(max_length=400)
     type = models.CharField(choices=PROVIDER_CHOICES, max_length=3)
