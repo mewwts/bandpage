@@ -24,12 +24,12 @@ msgstr "Konserter"
 
 #: bandpage/templates/bandpage/base.html:42
 msgid "Music"
-msgstr "Musikk"
+msgstr "Utgivelser"
 
 #: bandpage/templates/bandpage/base.html:43
 #: photos/templates/photos/index.html:11
 msgid "Photos"
-msgstr "Fotografier"
+msgstr "Foto"
 
 #: bandpage/templates/bandpage/base.html:44
 msgid "Videos"
