@@ -203,6 +203,7 @@ INSERT INTO "django_admin_log" VALUES(67,'2013-09-20 15:47:39.029117',1,13,'2','
 INSERT INTO "django_admin_log" VALUES(68,'2013-09-20 15:49:50.163643',1,13,'2','Test',2,'No fields changed.');
 INSERT INTO "django_admin_log" VALUES(69,'2013-09-20 16:11:10.096739',1,13,'2','Stødig som en bauta',2,'Changed title and lyrics.');
 INSERT INTO "django_admin_log" VALUES(70,'2013-09-20 16:13:16.873442',1,13,'2','Stødig som en bauta',2,'Changed lyrics.');
+INSERT INTO "django_admin_log" VALUES(71,'2013-09-20 17:35:09.937137',1,14,'1','Sapp',2,'Changed text.');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -318,12 +319,17 @@ CREATE TABLE "videos_video" (
     "date_published" date NOT NULL,
     "song_id" integer REFERENCES "music_song" ("id"),
     "video_id" varchar(60) NOT NULL
-)
-;
-INSERT INTO "videos_video" VALUES(1,'Sapp','you','mv','# SUPER HEADLINE 
+);
+INSERT INTO "videos_video" VALUES(1,'Sapp','you','mv','Offisiell musikkvideo for "Husk At Livet Går Fort"  
+Premiere på Tromsø International Filmfestival 16. januar 2013
 
+Isak Gjertsen, regi, produsent, animatør  
+Matt Willis-Jones, fargekorrigering  
+NN+, finansiering
 
-### Ikke supert','2013-09-05',1,'RsS4uCRrN_Y');
+Kinoversjon:  
+DCP, Knut Erik Evensen  
+5.1 lydmiks, Håvard Christensen','2013-09-05',1,'RsS4uCRrN_Y');
 CREATE INDEX "auth_permission_37ef4eb4" ON "auth_permission" ("content_type_id");
 CREATE INDEX "auth_group_permissions_5f412f9a" ON "auth_group_permissions" ("group_id");
 CREATE INDEX "auth_group_permissions_83d7f98b" ON "auth_group_permissions" ("permission_id");
