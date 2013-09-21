@@ -20,7 +20,7 @@
                         <tr>
                             <th class="date"><h5><span class="glyphicon glyphicon-calendar"></span></h5></th>
                             <th class="city"><h5><span class="glyphicon glyphicon-map-marker"></span> {% trans "City" %}</h5></th>
-                            <th class="venue"><h5><span class="glyphicon glyphicon-home"></i>{%trans "Venue" %}</h5></th>
+                            <th class="venue"><h5><span class="glyphicon glyphicon-home"></span> {%trans "Venue" %}</h5></th>
                             <th class="facebook"></th>
                             <th class="tickets"></th>
                         </tr>
@@ -38,7 +38,7 @@
                         </td>
                         <td>
                             {% if concert.ticket_url %}
-                            <a href="{{ concert.ticket_url }}"><span class="label label-default"><span class="glyphicon glyphicon-shopping-cart"></span>{% trans "Buy tickets" %}</span></a>
+                            <a href="{{ concert.ticket_url }}"><span class="label label-default"><span class="glyphicon glyphicon-shopping-cart"></span> {% trans "Buy tickets" %}</span></a>
                             {% endif %}
                         </td>
                     </tr>
