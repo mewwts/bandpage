@@ -49,44 +49,44 @@ msgstr "Presse/Promo"
 
 #: concerts/templates/concerts/index.html:11
 msgid "Upcoming concerts"
-msgstr ""
+msgstr "Kommende konserter"
 
 #: concerts/templates/concerts/index.html:12
 #, fuzzy
 msgid "Past concerts"
-msgstr "Konserter"
+msgstr "Siste konserter"
 
 #: concerts/templates/concerts/index.html:22
 msgid "City"
-msgstr ""
+msgstr "By"
 
 #: concerts/templates/concerts/index.html:23
 msgid "Venue"
-msgstr ""
+msgstr "Scene"
 
 #: concerts/templates/concerts/index.html:41
 msgid "Buy tickets"
-msgstr ""
+msgstr "Kjøp billetter"
 
 #: concerts/templates/concerts/index.html:50
 msgid "There are no concerts to display."
-msgstr ""
+msgstr "Her er det ingen konserter."
 
 #: landingpage/templates/landingpage/index.html:17
 msgid "There's nothing here"
-msgstr ""
+msgstr "Det er ingen ting her."
 
 #: music/templates/music/index.html:12
 msgid "Albums"
-msgstr ""
+msgstr "Album"
 
 #: music/templates/music/index.html:44
 msgid "Singles"
-msgstr ""
+msgstr "Singler"
 
 #: music/templates/music/index.html:109
 msgid "There is no music to display"
-msgstr ""
+msgstr "Det er ingen musikk her"
 
 #: photos/templates/photos/index.html:19
 msgid "Photo"
