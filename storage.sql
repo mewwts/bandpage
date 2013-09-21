@@ -321,6 +321,7 @@ CREATE TABLE "videos_video" (
     "song_id" integer REFERENCES "music_song" ("id"),
     "video_id" varchar(60) NOT NULL
 );
+<<<<<<< HEAD
 INSERT INTO "videos_video" VALUES(1,'Sapp','you','mv','Offisiell musikkvideo for "Husk At Livet Går Fort"  
 Premiere på Tromsø International Filmfestival 16. januar 2013
 
@@ -332,6 +333,8 @@ Kinoversjon:
 DCP, Knut Erik Evensen  
 5.1 lydmiks, Håvard Christensen','2013-09-05',1,'RsS4uCRrN_Y');
 CREATE INDEX "auth_permission_37ef4eb4" ON "auth_permission" ("content_type_id");
+=======
+>>>>>>> 89b38c881f7206579e6a6a1f932c76a8d807ef30
 CREATE INDEX "auth_group_permissions_5f412f9a" ON "auth_group_permissions" ("group_id");
 CREATE INDEX "auth_group_permissions_83d7f98b" ON "auth_group_permissions" ("permission_id");
 CREATE INDEX "auth_user_groups_6340c63c" ON "auth_user_groups" ("user_id");
