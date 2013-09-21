@@ -83,7 +83,7 @@ CREATE TABLE "auth_user" (
     "is_active" bool NOT NULL,
     "date_joined" datetime NOT NULL
 );
-INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-09-21 09:04:06.245430',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
+INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$10000$yBfJYh3LEuIC$rMVXJyCsv5C3EjD7yTlXeMbeHofHBteUGAF7dwbGmC8=','2013-09-20 19:38:30.706059',1,'krk','','','',1,1,'2013-08-03 19:01:53.347136');
 CREATE TABLE "django_content_type" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(100) NOT NULL,
@@ -118,7 +118,6 @@ INSERT INTO "django_session" VALUES('uy6gz07rxbhhi6qoyi2qm7zxejppmmjy','NDgxYjZj
 INSERT INTO "django_session" VALUES('5ikbew3vzs9tvrpmckazqhd1po7l9u7m','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-09-18 22:43:29.641883');
 INSERT INTO "django_session" VALUES('xz7ot07adyh3tkia48zs8yxv9139e2q9','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-10-04 14:44:11.425481');
 INSERT INTO "django_session" VALUES('irre12mdwk9xwj7be5cpwzdw9shrjts7','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-10-04 19:38:30.708021');
-INSERT INTO "django_session" VALUES('ep85f1pspvqtzw6a2qvqg6ixgn2p7gjx','NDgxYjZjMzFlZmJkN2Y5ZGU4YjZhMDlkMjljODMyMTY4NzFjMzhjNzqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu','2013-10-05 09:04:06.248743');
 CREATE TABLE "django_site" (
     "id" integer NOT NULL PRIMARY KEY,
     "domain" varchar(100) NOT NULL,
@@ -206,8 +205,6 @@ INSERT INTO "django_admin_log" VALUES(68,'2013-09-20 15:49:50.163643',1,13,'2','
 INSERT INTO "django_admin_log" VALUES(69,'2013-09-20 16:11:10.096739',1,13,'2','Stødig som en bauta',2,'Changed title and lyrics.');
 INSERT INTO "django_admin_log" VALUES(70,'2013-09-20 16:13:16.873442',1,13,'2','Stødig som en bauta',2,'Changed lyrics.');
 INSERT INTO "django_admin_log" VALUES(71,'2013-09-20 17:35:09.937137',1,14,'1','Sapp',2,'Changed text.');
-INSERT INTO "django_admin_log" VALUES(72,'2013-09-21 09:24:32.261936',1,14,'1','Fox',1,'');
-INSERT INTO "django_admin_log" VALUES(73,'2013-09-21 09:25:13.871174',1,14,'2','Hellz yeah man',1,'');
 CREATE TABLE "concerts_concert" (
     "id" integer NOT NULL PRIMARY KEY,
     "date" datetime NOT NULL,
@@ -324,7 +321,6 @@ CREATE TABLE "videos_video" (
     "song_id" integer REFERENCES "music_song" ("id"),
     "video_id" varchar(60) NOT NULL
 );
-<<<<<<< HEAD
 INSERT INTO "videos_video" VALUES(1,'Sapp','you','mv','Offisiell musikkvideo for "Husk At Livet Går Fort"  
 Premiere på Tromsø International Filmfestival 16. januar 2013
 
@@ -336,14 +332,6 @@ Kinoversjon:
 DCP, Knut Erik Evensen  
 5.1 lydmiks, Håvard Christensen','2013-09-05',1,'RsS4uCRrN_Y');
 CREATE INDEX "auth_permission_37ef4eb4" ON "auth_permission" ("content_type_id");
-=======
-INSERT INTO "videos_video" VALUES(1,'Fox','you','tv','# Supert
-
-## wooops','2013-09-21',1,'ztoMQrHmIso');
-INSERT INTO "videos_video" VALUES(2,'Hellz yeah man','vim','mv','# happy days
-
-## happy ','2013-09-21',2,'68307465');
->>>>>>> b5e73792189bfc025922520794e2e5e7f7f2e2f4
 CREATE INDEX "auth_group_permissions_5f412f9a" ON "auth_group_permissions" ("group_id");
 CREATE INDEX "auth_group_permissions_83d7f98b" ON "auth_group_permissions" ("permission_id");
 CREATE INDEX "auth_user_groups_6340c63c" ON "auth_user_groups" ("user_id");
