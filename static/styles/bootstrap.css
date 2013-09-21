@@ -5542,13 +5542,13 @@ footer #contact-info #promo {
 -------------------------- */
 @-webkit-keyframes scaleFade {
   from {
-    top: -40px;
-    -moz-opacity: 0;
-    -khtml-opacity: 0;
-    -webkit-opacity: 0;
-    opacity: 0;
-    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
-    filter: alpha(opacity=0);
+    top: -20px;
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    -webkit-opacity: 0.5;
+    opacity: 0.5;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    filter: alpha(opacity=50);
   }
   to {
     top: 0px;
@@ -5562,13 +5562,13 @@ footer #contact-info #promo {
 }
 @-moz-keyframes scaleFade {
   from {
-    top: -40px;
-    -moz-opacity: 0;
-    -khtml-opacity: 0;
-    -webkit-opacity: 0;
-    opacity: 0;
-    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
-    filter: alpha(opacity=0);
+    top: -20px;
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    -webkit-opacity: 0.5;
+    opacity: 0.5;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    filter: alpha(opacity=50);
   }
   to {
     top: 0px;
@@ -5582,13 +5582,13 @@ footer #contact-info #promo {
 }
 @-o-keyframes scaleFade {
   from {
-    top: -40px;
-    -moz-opacity: 0;
-    -khtml-opacity: 0;
-    -webkit-opacity: 0;
-    opacity: 0;
-    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
-    filter: alpha(opacity=0);
+    top: -20px;
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    -webkit-opacity: 0.5;
+    opacity: 0.5;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    filter: alpha(opacity=50);
   }
   to {
     top: 0px;
@@ -5611,9 +5611,9 @@ body#landingpage section.content {
 body#landingpage .poster {
   text-align: center;
   position: relative;
-  -webkit-animation: scaleFade 0.5s 1 ease-in;
-  -moz-animation: scaleFade 0.5s 1 ease-in;
-  -o-animation: scaleFade 0.5s 1 ease-in;
+  -webkit-animation: scaleFade 0.5s 0 1 ease-out;
+  -moz-animation: scaleFade 0.5s 0 1 ease-out;
+  -o-animation: scaleFade 0.5s 0 1 ease-out;
 }
 body#landingpage h1,
 body#landingpage p {
