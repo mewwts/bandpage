@@ -4,5 +4,5 @@ from django.utils.translation import ugettext_lazy as _
 
 urlpatterns = patterns('',
                        url(r'^$', views.index, name='index'),
-                       url(_(r'lyrics'), views.lyrics, name='lyrics'),
+                       url(_(r'lyrics/'), views.lyrics, name='lyrics'),
                        )

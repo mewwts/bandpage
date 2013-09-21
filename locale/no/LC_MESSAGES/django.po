@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-21 12:54+0200\n"
+"POT-Creation-Date: 2013-09-21 13:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: bandpage/urls.py:21
+#: bandpage/urls.py:20
 msgid "^concerts/"
 msgstr "^konserter/"
 
-#: bandpage/urls.py:22
+#: bandpage/urls.py:21
 msgid "^music/"
 msgstr "^musikk/"
 
-#: bandpage/urls.py:23
+#: bandpage/urls.py:22
 msgid "^photos/"
 msgstr "^foto/"
 
-#: bandpage/urls.py:24
+#: bandpage/urls.py:23
 msgid "^videos/"
 msgstr "^video/"
 
@@ -91,9 +91,10 @@ msgstr "Her er det ingen konserter."
 msgid "There's nothing here"
 msgstr "Det er ingen ting her."
 
-#: music/urls.py:6
-msgid "lyrics"
-msgstr "tekster"
+#: music/urls.py:7
+#, fuzzy
+msgid "lyrics/"
+msgstr "tekster/"
 
 #: music/templates/music/index.html:12
 msgid "Albums"
