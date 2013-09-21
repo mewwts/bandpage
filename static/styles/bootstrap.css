@@ -5449,12 +5449,10 @@ body.modal-open,
     padding-top: 0;
   }
 }
-/*  Animations
--------------------------- */
 /*  Generic styles
 -------------------------- */
 body {
-  background: #e8e8e8;
+  background: #f5f5f5;
 }
 a {
   text-decoration: none;
@@ -5489,6 +5487,9 @@ header .navbar a {
   -o-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
 }
+header .navbar a.active {
+  color: white;
+}
 /*  Page
 -------------------------- */
 section {
@@ -5497,9 +5498,10 @@ section {
   color: #404040;
 }
 footer {
-  background: #e8e8e8;
+  background: #f5f5f5;
   padding: 40px 0;
-  color: #292929;
+  color: #363636;
+  border-top: 2px solid #e8e8e8;
 }
 footer #contact-info {
   margin-left: -15px;
@@ -5537,6 +5539,13 @@ footer #contact-info #promo {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+}
+footer #contact-info #booking h3,
+footer #contact-info #promo h3 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.375em;
+  margin: 0;
 }
 /*  Page specific: Landingpage
 -------------------------- */
@@ -5661,7 +5670,7 @@ body#landingpage.dark {
 }
 body#landingpage.dark h1,
 body#landingpage.dark p {
-  color: #e8e8e8;
+  color: #f5f5f5;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 }
 body#landingpage.dark header {

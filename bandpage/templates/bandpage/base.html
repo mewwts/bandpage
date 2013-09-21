@@ -1,5 +1,6 @@
 {% load staticfiles %}
-{% load i18n %}<!DOCTYPE html>
+{% load i18n %}
+{% load activelink %}<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -33,16 +34,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">{{ band_name }}</a>
+                    <a class="navbar-brand{% block frontpageActiveHack %}{% endblock %}" href="/">{{ band_name }}</a>
                 </div>
 
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{% url 'concerts:index' %}">{% trans "Concerts" %}</a></li>
-                        <li><a href="{% url 'music:index' %}">{% trans "Music" %}</a></li>
-                        <li><a href="{% url 'photos:index' %}">{% trans "Photos" %}</a></li>
-                        <li><a href="{% url 'videos:index' %}">{% trans "Videos" %}</a></li>
-                        <li><a href="{% url 'music:lyrics' %}">{% trans "Lyrics" %}</a></li>
+                        <li><a href="{% url 'concerts:index' %}"{% ifactive 'concerts:index' %} class="active" {% endifactive %}>{% trans "Concerts" %}</a></li>
+                        <li><a href="{% url 'music:index' %}"{% ifactive 'music:index' %} class="active" {% endifactive %}>{% trans "Music" %}</a></li>
+                        <li><a href="{% url 'photos:index' %}"{% ifactive 'photos:index' %} class="active" {% endifactive %}>{% trans "Photos" %}</a></li>
+                        <li><a href="{% url 'videos:index' %}"{% ifactive 'videos:index' %} class="active" {% endifactive %}>{% trans "Videos" %}</a></li>
+                        <li><a href="{% url 'music:lyrics' %}"{% ifactive 'music:lyrics' %} class="active" {% endifactive %}>{% trans "Lyrics" %}</a></li>
                         <li><a href="{{ twitter_url }}">Twitter</a></li>
                         <li><a href="{{ facebook_url }}">Facebook</a></li>
                     </ul>
