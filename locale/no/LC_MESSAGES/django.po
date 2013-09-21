@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-21 11:40+0200\n"
+"POT-Creation-Date: 2013-09-21 12:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,30 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: bandpage/urls.py:19
+msgid "^admin/"
+msgstr "^admin"
+
+#: bandpage/urls.py:20
+msgid "^"
+msgstr "^"
+
+#: bandpage/urls.py:21
+msgid "^concerts/"
+msgstr "^konserter"
+
+#: bandpage/urls.py:22
+msgid "^music/"
+msgstr "^musikk"
+
+#: bandpage/urls.py:23
+msgid "^photos/"
+msgstr "^foto"
+
+#: bandpage/urls.py:24
+msgid "^videos/"
+msgstr "^video"
 
 #: bandpage/templates/bandpage/base.html:41
 #: concerts/templates/concerts/index.html:3
@@ -106,3 +130,7 @@ msgstr "Coverlåter"
 #: videos/templates/videos/index.html:22
 msgid "Other"
 msgstr "Andre"
+
+#: videos/templates/videos/index.html:47
+msgid "There are no videos to display."
+msgstr "Her er det ingen konserter."
