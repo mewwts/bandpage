@@ -14,7 +14,7 @@
         {% if landingpage.link_url %}<p><a href="{{ landingpage.link_url }}" class="btn btn-default btn-lg">{{ landingpage.link_text}}</a></p>{% endif %}
     </div>
     {% else %}
-        <p>Det er ingen ting her</p>
+        <p>{% trans "There's nothing here" %}</p>
     {% endif %}
 
 {% endblock content %}

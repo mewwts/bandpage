@@ -1,4 +1,5 @@
-{% load staticfiles %}<!DOCTYPE html>
+{% load staticfiles %}
+{% load i18n %}<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -37,11 +38,11 @@
 
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{% url 'concerts:index' %}">Concerts</a></li>
-                        <li><a href="{% url 'music:index' %}">Music</a></li>
-                        <li><a href="{% url 'photos:index' %}">Photos</a></li>
-                        <li><a href="{% url 'videos:index' %}">Videos</a></li>
-                        <li><a href="{% url 'music:lyrics' %}">Lyrics</a></li>
+                        <li><a href="{% url 'concerts:index' %}">{% trans "Concerts" %}</a></li>
+                        <li><a href="{% url 'music:index' %}">{% trans "Music" %}</a></li>
+                        <li><a href="{% url 'photos:index' %}">{% trans "Photos" %}</a></li>
+                        <li><a href="{% url 'videos:index' %}">{% trans "Videos" %}</a></li>
+                        <li><a href="{% url 'music:lyrics' %}">{% trans "Lyrics" %}</a></li>
                         <li><a href="{{ twitter_url }}">Twitter</a></li>
                         <li><a href="{{ facebook_url }}">Facebook</a></li>
                     </ul>
@@ -64,7 +65,7 @@
         <div class="container">
             <div id="contact-info">
                 <div id="booking">
-                    <h3>Booking:</h3>
+                    <h3>{% trans "Booking" %}:</h3>
                     <p>{{ booking_name }}<br>
                        {{ booking_phone}}<br>
                        <a href="mailto:{{ booking_mail }}">{{ booking_mail }}</a>
@@ -72,7 +73,7 @@
                 </div>
 
                 <div id="promo">
-                    <h3>Presse/promo:</h3>
+                    <h3>{% trans  "PR" %} :</h3>
                     <p>{{ pr_name}}<br>
                        {{ pr_phone}}<br>
                        <a href="mailto:{{ pr_mail }}">{{ pr_mail }}</a>

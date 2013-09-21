@@ -49,7 +49,7 @@ SITE_ID = 1
 USE_I18N = True
 
 LOCALE_PATHS = (
-    os.path.join(APP_ROOT, 'locale'),    
+    os.path.join(PROJECT_ROOT, 'locale'),    
 )
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale.

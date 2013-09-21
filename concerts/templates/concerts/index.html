@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
-
-{% block title %} &mdash; Concerts{% endblock title %}
+{% load i18n %}
+{% block title %} &mdash; {% trans "Concerts" %}{% endblock title %}
 
 {% block body_id %} id="concerts"{% endblock body_id %}
 
@@ -8,8 +8,8 @@
     {% for concerts in concert_lists %}
         <div class="concert-lists">
             <div class="title">
-                {% if concerts == concert_lists.0 %}<h1>Upcoming concerts</h1>
-                {% else %}<h1>Past concerts</h1>
+                {% if concerts == concert_lists.0 %}<h1>{% trans "Upcoming concerts" %}</h1>
+                {% else %}<h1>{% trans "Past concerts" %}</h1>
                 {% endif %}<hr>
             </div>
 
@@ -19,8 +19,8 @@
                     <thead>
                         <tr>
                             <th class="date"><h5><span class="glyphicon glyphicon-calendar"></span></h5></th>
-                            <th class="city"><h5><span class="glyphicon glyphicon-map-marker"></span> City</h5></th>
-                            <th class="venue"><h5><span class="glyphicon glyphicon-home"></i> Venue</h5></th>
+                            <th class="city"><h5><span class="glyphicon glyphicon-map-marker"></span> {% trans "City" %}</h5></th>
+                            <th class="venue"><h5><span class="glyphicon glyphicon-home"></i>{%trans "Venue" %}</h5></th>
                             <th class="facebook"></th>
                             <th class="tickets"></th>
                         </tr>
@@ -38,7 +38,7 @@
                         </td>
                         <td>
                             {% if concert.ticket_url %}
-                            <a href="{{ concert.ticket_url }}"><span class="label label-default"><span class="glyphicon glyphicon-shopping-cart"></span> Kjøp billett</span></a>
+                            <a href="{{ concert.ticket_url }}"><span class="label label-default"><span class="glyphicon glyphicon-shopping-cart"></span>{% trans "Buy tickets" %}</span></a>
                             {% endif %}
                         </td>
                     </tr>
@@ -47,7 +47,7 @@
             </div>
             {% else %}
             <div class="concert-list">
-                <p class="lead">There are no concerts to display.</p>
+                <p class="lead">{% trans "There are no concerts to display." %}</p>
             </div>
         {% endif %}
 
