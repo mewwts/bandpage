@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-21 12:48+0200\n"
+"POT-Creation-Date: 2013-09-21 12:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,47 +19,47 @@ msgstr ""
 
 #: bandpage/urls.py:21
 msgid "^concerts/"
-msgstr "^konserter"
+msgstr "^konserter/"
 
 #: bandpage/urls.py:22
 msgid "^music/"
-msgstr "^musikk"
+msgstr "^musikk/"
 
 #: bandpage/urls.py:23
 msgid "^photos/"
-msgstr "^foto"
+msgstr "^foto/"
 
 #: bandpage/urls.py:24
 msgid "^videos/"
-msgstr "^video"
+msgstr "^video/"
 
-#: bandpage/templates/bandpage/base.html:41
+#: bandpage/templates/bandpage/base.html:42
 #: concerts/templates/concerts/index.html:3
 msgid "Concerts"
 msgstr "Konserter"
 
-#: bandpage/templates/bandpage/base.html:42
+#: bandpage/templates/bandpage/base.html:43
 msgid "Music"
 msgstr "Utgivelser"
 
-#: bandpage/templates/bandpage/base.html:43
+#: bandpage/templates/bandpage/base.html:44
 #: photos/templates/photos/index.html:11
 msgid "Photos"
 msgstr "Foto"
 
-#: bandpage/templates/bandpage/base.html:44
+#: bandpage/templates/bandpage/base.html:45
 msgid "Videos"
 msgstr "Videoer"
 
-#: bandpage/templates/bandpage/base.html:45
+#: bandpage/templates/bandpage/base.html:46
 msgid "Lyrics"
 msgstr "Tekster"
 
-#: bandpage/templates/bandpage/base.html:68
+#: bandpage/templates/bandpage/base.html:69
 msgid "Booking"
 msgstr "Booking"
 
-#: bandpage/templates/bandpage/base.html:76
+#: bandpage/templates/bandpage/base.html:77
 msgid "PR"
 msgstr "Presse/Promo"
 
@@ -87,9 +87,13 @@ msgstr "Kjøp billetter"
 msgid "There are no concerts to display."
 msgstr "Her er det ingen konserter."
 
-#: landingpage/templates/landingpage/index.html:17
+#: landingpage/templates/landingpage/index.html:19
 msgid "There's nothing here"
 msgstr "Det er ingen ting her."
+
+#: music/urls.py:6
+msgid "lyrics"
+msgstr "tekster"
 
 #: music/templates/music/index.html:12
 msgid "Albums"
