@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load i18n %}
 {% block title %} &mdash; Photos{% endblock title %}
 
@@ -9,7 +8,7 @@
     <div class="photo-list">
         {% if photo_list %}
             <div class="title">
-                <h1>{% trans Photos $}</h1>
+                <h1>{% trans "Photos" %}</h1>
                 <hr>
             </div>
             {% for photo in photo_list %}
@@ -17,7 +16,7 @@
                 <a href="{{ photo.image.url }}" alt="{{ photo.title }}">
                     <img class="img-responsive" src="{{ photo.thumbnail.url }}">
                     {% if photo.photographer %}
-                        <p class="byline">Foto: <strong>{{ photo.photographer }}</strong></p>
+                        <p class="byline">{% trans "Photo" %}: <strong>{{ photo.photographer }}</strong></p>
                     {% else %}
                         <p class="byline">&nbsp;</p>
                     {% endif %}

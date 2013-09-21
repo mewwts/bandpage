@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block title %} &mdash; Music{% endblock title %}
 
 {% block body_id %} id="music"{% endblock body_id %}
@@ -9,7 +9,7 @@
         {% if album_list %}
             <div id="albums" class="release-type">
                 <div class="title">
-                    <h1>Albums</h1>
+                    <h1>{% trans "Albums" %}</h1>
                     <hr>
                 </div>
                 {% for album in album_list %}
@@ -41,7 +41,7 @@
         {% if single_list %}
         <div id="singles" class="release-type">
             <div class="title">
-                <h1>Singles</h1>
+                <h1>{% trans "Singles" %}</h1>
                 <hr>
             </div>
             {% for single in single_list %}
@@ -72,7 +72,7 @@
         {% if vinyl_list %}
         <div id="vinyls" class="release-type">
             <div class="title">
-                <h1>Vinyls</h1>
+                <h1>{% trans Vinyls %}</h1>
                 <hr>
             </div>
             {% for vinyl in vinyl_list %}
@@ -106,7 +106,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>Eeeh…</h1>
-                <p class="lead">There is no music to display</p>
+                <p class="lead">{% trans "There is no music to display" %}</p>
                 <hr>
             </div>
         </div>
