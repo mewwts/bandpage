@@ -1,37 +1,50 @@
 {% extends 'base.html' %}
 {% load markup %}
-
+{% load i18n %}
 {% block title %} &mdash; Videos{% endblock title %}
 
 {% block body_id %} id="videos"{% endblock body_id %}
 
 {% block content %}
 
-    {% if video_list %}
-        <div class="title">
-            <h1>Music Videos</h1><!-- sett inn kategori her -->
-            <hr>
-        </div>
-        {% for video in video_list %}
-            <div class="release">
-                <div class="video">
-                    <div class="flex-video">
-                    {% if video.type == "you" %}
-                        <iframe width="560" height="315" src="//www.youtube.com/embed/{{ video.video_id}}" frameborder="0" allowfullscreen></iframe>
-                    {% elif video.type == "vim" %}
-                        <iframe src="http://player.vimeo.com/video/{{video.video_id}}" width="560" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    {% if video_lists %}
+            {% for videos in video_lists %} 
+                <div class="title">
+                    {% if videos %}
+                        {% with cat=videos.0.category %}
+                            {% if  cat == 'mv' %}
+                                <h1>{% trans "Music Videos" %}</h1>
+                            {% elif cat == 'tv' %}
+                                <h1>{% trans "Television Perfomance" %}</h1>
+                            {% elif cat == 'cv' %}
+                                <h1>{% trans "Cover Songs" %}</h1>
+                            {% elif cat == 'dv' %}
+                                <h1>{% trans "Other" %}</h1>
+                            {% endif %}
+                        {% endwith %}
+                    <hr>
                     {% endif %}
-                    </div>
                 </div>
-                <div class="info">
-                    <h2>{{ video.title }}</h2>
-                    {{ video.text|markdown:"safe" }}
-                </div> 
-            </div>
-        {% endfor %}
-        </div>
+                {% for video in videos %}
+                    <div class="release">
+                        <div class="video">
+                            <div class="flex-video">
+                            {% if video.type == "you" %}
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/{{ video.video_id}}" frameborder="0" allowfullscreen></iframe>
+                            {% elif video.type == "vim" %}
+                                <iframe src="http://player.vimeo.com/video/{{video.video_id}}" width="560" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                            {% endif %}
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h2>{{ video.title }}</h2>
+                            {{ video.text|markdown:"safe" }}
+                        </div> 
+                    </div>
+                {% endfor %}
+            {% endfor %}
     {% else %}
-        <p>There are no videos to display.</p>
+        <p>{% trans "There are no videos to display." %}</p>
     {% endif %}
     
 {% endblock content %}

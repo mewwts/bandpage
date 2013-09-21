@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-21 10:36+0200\n"
+"POT-Creation-Date: 2013-09-21 11:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,7 +52,6 @@ msgid "Upcoming concerts"
 msgstr "Kommende konserter"
 
 #: concerts/templates/concerts/index.html:12
-#, fuzzy
 msgid "Past concerts"
 msgstr "Siste konserter"
 
@@ -91,3 +90,19 @@ msgstr "Det er ingen musikk her"
 #: photos/templates/photos/index.html:19
 msgid "Photo"
 msgstr "Foto"
+
+#: videos/templates/videos/index.html:16
+msgid "Music Videos"
+msgstr "Musikkvideoer"
+
+#: videos/templates/videos/index.html:18
+msgid "Television Perfomance"
+msgstr "TV"
+
+#: videos/templates/videos/index.html:20
+msgid "Cover Songs"
+msgstr "Coverlåter"
+
+#: videos/templates/videos/index.html:22
+msgid "Other"
+msgstr "Andre"
