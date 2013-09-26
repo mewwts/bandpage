@@ -92,7 +92,6 @@ msgid "There's nothing here"
 msgstr "Det er ingen ting her."
 
 #: music/urls.py:7
-#, fuzzy
 msgid "lyrics/"
 msgstr "tekster/"
 
