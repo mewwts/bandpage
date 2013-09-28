@@ -5471,7 +5471,7 @@ body.modal-open,
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-  background: #3fb5bc;
+  background: #18474a;
 }
 /*  Generic styles
 -------------------------- */
@@ -5573,6 +5573,22 @@ footer #contact-info #promo h3 {
   font-weight: bold;
   line-height: 1.375em;
   margin: 0;
+}
+footer #contact-info #colophon {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #b3b3b3;
+}
+footer #contact-info #colophon a {
+  color: #a6a6a6;
+  border-color: #a6a6a6;
+}
+footer #contact-info #colophon a:hover {
+  color: #8c8c8c;
 }
 /*  Page specific: Landingpage
 -------------------------- */
@@ -5678,7 +5694,7 @@ body#landingpage h1 + p {
   padding-bottom: 20px;
 }
 body#landingpage .cover-image {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
