@@ -37,8 +37,8 @@
                             {% endif %}
                         </td>
                         <td>
-                            {% if concert.ticket_url %}
-                            <a href="{{ concert.ticket_url }}"><span class="label label-default"><span class="glyphicon glyphicon-shopping-cart"></span> {% trans "Buy tickets" %}</span></a>
+                            {% if concert.ticket_url %}        
+                            <a href="{{ concert.ticket_url }}" ><span class="label label-default {% if concert.is_sold_out %}sold_out{% endif %} "><span class="glyphicon glyphicon-shopping-cart"></span> {% trans "Buy tickets" %}</span></a>
                             {% endif %}
                         </td>
                     </tr>
